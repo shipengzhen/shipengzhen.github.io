@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.shipengzhen.top/"/>
-  <updated>2020-06-19T09:54:33.661Z</updated>
+  <updated>2020-06-20T07:16:29.081Z</updated>
   <id>https://blog.shipengzhen.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Liunx常用命令</title>
+    <link href="https://blog.shipengzhen.top/2020/06/20/yun-wei/liunx-chang-yong-ming-ling/"/>
+    <id>https://blog.shipengzhen.top/2020/06/20/yun-wei/liunx-chang-yong-ming-ling/</id>
+    <published>2020-06-20T07:15:00.000Z</published>
+    <updated>2020-06-20T07:16:29.081Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h2&gt;&lt;pre class=&quot; language-liunx&quot;&gt;&lt;code class=&quot;language-liunx&quot;&gt;查看当前目录
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="Liunx常用命令" scheme="https://blog.shipengzhen.top/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>Fenix — 比 MyBatis 更加强大的 Spring Data JPA 扩展库</title>
@@ -565,35 +594,6 @@
     
     
       <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java面向对象设计之责任链模式</title>
-    <link href="https://blog.shipengzhen.top/2018/11/04/ruan-jian-she-ji/she-ji-mo-shi/java-mian-xiang-dui-xiang-she-ji-zhi-ze-ren-lian-mo-shi/"/>
-    <id>https://blog.shipengzhen.top/2018/11/04/ruan-jian-she-ji/she-ji-mo-shi/java-mian-xiang-dui-xiang-she-ji-zhi-ze-ren-lian-mo-shi/</id>
-    <published>2018-11-04T14:00:00.000Z</published>
-    <updated>2020-06-19T09:54:33.706Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;模式动机&quot;&gt;&lt;a href=&quot;#模式动机&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件设计" scheme="https://blog.shipengzhen.top/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
-    
-      <category term="设计模式" scheme="https://blog.shipengzhen.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   

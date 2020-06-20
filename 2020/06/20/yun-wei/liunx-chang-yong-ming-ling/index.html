@@ -435,6 +435,10 @@
                                 <span class="chip bg-color">运维</span>
                             </a>
                         
+                            <a href="/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                                <span class="chip bg-color">Liunx常用命令</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -456,7 +460,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-09-25
+                    2020-06-20
                 </div>
                 
 
@@ -472,21 +476,296 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>查看当前目录 pwd<br>清屏 clear<br>查看文档 man 命令<br>结束进程 q<br>清屏 clear<br>mut(挂载) mut[设备名称][挂载点]<br>查询用户<br>cat /etc/passwd<br>查询组<br>cat /etc/group<br>筛选<br>grep mysql<br>cat /etc/group | grep mysql<br>cd<br>    打开指定目录: cd[目录名称]<br>    打开当前用户的主目录: cd ～<br>    返回上级目录: cd..<br>    返回进入目录: cd -<br>    打开根目录: cd /<br>ls<br>    以列的方式查看当前目录下的文件列表: ls -l,ll,ls -ll<br>    查看当前目录下所有的文件(包括隐藏文件): ls -a （隐藏文件前面带点）<br>    以列表的方式查看当前目录下的所有文件: ls -la<br>mkdir<br>    新建文件目录: mkdir文件夹名称<br>    递归新建多级目录: mkdir -p文件夹名称<br>rmkdir(删除文件目录命令):rmkdir[选项]目录名称<br>    删除指定目录: rmkdir 目录名称<br>rm(删除文件或目录) rm[选项]档案或目录<br>    强制删除文件或目录:rm -rf 目录或文件<br>    在删除前询问是否确认删除:rm -ri 目录或者文件<br>cp(复制文件或目录命令) cp[选项][目录][名称][目录2名称]<br>    复制目录1的所有的文件和文件夹到目录2: cp -r[目录1][目录2]<br>    执行复制操作是覆盖原有目录前询问用户:cp -ri[目录1][目录2]<br>mv(移动文件、修改文件名命令) mv[选项][源文件或目录][目标文件或目录]<br>    将文件夹1名称更改为文件2: mv 文件1 文件2<br>    将目录1的文件移动到目录2: mv 目录1 目录2<br>1.touch(创建文件命令) touch 文件名称<br>2.vi/vim(查看、编辑文件) vi 文件名<br>    1)命令模式<br>        L: 光标以至屏幕最后一行<br>        space: 光标右移一个字符<br>        backspace:光标左移一个字符<br>        N+:光标向上移动N行<br>        n+:光标向下移动n行<br>    2)输入模式 Esc<br>        a,i,r,o,A,I,R,O:编辑模式<br>        dd:删除光标当前行<br>        ndd:删除n行<br>    3)末行模式 :<br>        :wq!   保存并退出<br>        :q!    强制退出<br>        :s/字符串1/字符串2      将文件中出现的字符串1替换成字符串2<br>        :set nu    显示所有的行号<br>3.cat(查看、编辑文件命令)  cat[-参数选项]文件名称<br>    显示一个小的文件的内容: cat 文件名称<br>    创建并打开一个新的文件: cat &gt;文件名称<br>4.head(查看文件开头内容,默认10行) head[参数][文件]<br>    head -n文件名称<br>5.tail(查看文件结尾内容命令) tail[-参数选项]文件名称<br>    动态加载某个文件的内容(常用于查看日志文件): tail -f文件名称<br>    展示文件最后几行的数据: tail -n 行数文件名称</p>
-<p>用户操作命令<br>查看当前用户密码<br>    vim /etc/passwd<br>    vim /etc/shadow</p>
-<p>1.su(切换用户命令) su[用户名]或su -[用户名] sudo(以root权限运行)<br>2.whoami(查看当前登录用户命令)  whoami<br>3.groups(查看当前用户所分属分组命令groups) groups<br>  创建组 groupadd<br>4.id(查看当前用户UID和GID) id<br>5.useradd(添加新用户命令)  useradd[选项][用户名]<br>    -c 代表comment指定一段注释性描述<br>    -d 指定用户主目录<br>    -g 指定用户所属的用户组<br>    -G 指定用户所属的附加组<br>    -u 指定用户的用户名<br>    -r 创建系统账户<br>    添加用户: useradd 用户名<br>    添加用户并指定UID: useradd -u 指定的UID用户名(最好&gt;500)<br>6.passwd(修改用户密码命令) passwd[选项][参数]<br>    修改密码: passwd 用户名 密码<br>    -d 删除密码,仅有系统管理员才能使用<br>    -f 强制执行<br>    -k 设置只有密码过期后才能更新<br>    -l 锁住密码<br>    -s 列出密码的相关信息，仅有系统管理员才能使用<br>    -u 解开已上锁的帐号<br>7.userdel(删除用户) userdel[选项][用户名]<br>    删除用户: userdel 用户名<br>    -r 删除用户以及其登录日志等信息<br>    -f 强制删除用户，即使用户已登录<br>8.usermod(修改用户信息)<br>    修改用户登录名: usermod -l 新用户名 旧用户名<br>    修改用户所属分组: usermod -g 新组名称 用户名<br>    -c 修改用户帐号的备注文字<br>    -d 修改用户登录时的目录<br>    -e 修改帐号的有效期<br>    -f 修改密码过期后多少天关闭帐号<br>    -g 修改用户所属的群组<br>    -G 修改用户所属附属组<br>    -l 修改用户帐号名称<br>    -L 锁定用户密码，使用密码无效<br>    -u 修改用户id<br>    -U 解除密码锁定<br>9.groupadd(添加用户组) groupadd[选项][组名称]<br>    修改用户登录名: groupadd 组名<br>    修改用户所属分组: groupadd -g组 GID 组名<br>    -g 指定工作组的id<br>    -r 创建系统工作组<br>    -o 允许添加组ID不唯一的工作组<br>权限操作<br>    drwxrwxr-x. 3 spz spz 21 8月   9 22:16 Learning<br>    -rwxrw-rw-. 1 spz spz 3399 8月  25 12:05 Liunx命令.txt<br>    d:代表是目录<br>    -：代表文件<br>    rwx：r(读),w(写),x(执行)<br>    r -x：代表同组用户具有读、执行的权限，但是没有写的权限<br>    更变权限 chmod[选项][参数]<br>    -c 显示指令执行过程，但只返回更改的部分<br>    -f 不显示错误信息<br>    -r 递归授权<br>    -v 显示指令执行过程<br>chmod   ===》修改文件权限<br>    文件格式有两种格式：数字法、字母法<br>    数字法：<br>    r ===》读取权限，数字代号为 “4”<br>    w ===》写入权限，数字代号为 “2”<br>    x ===》执行权限，数字代号为 “1”<br>    - ===》不具任何权限，数字代号为 “0”<br>    字母法：<br>    u   ===》 user 表示该文件的所有者<br>    g   ===》 group 表示与该文件的所有者属于同一组( group )者，即用户组<br>    o   ===》other 表示其他以外的人<br>    a    ===》all 表示这三者皆是<br>chmod 777 test.sh 赋予文件可执行权限<br>755 全部权限<br>chown -R mysql:mysql /usr/local/mysql<br>chown -R mysql mysql/<br>chgrp -R mysql mysql/<br>赋予root权限<br>    方法一： 修改 /etc/sudoers 文件，找到下面一行，把前面的注释（#）去掉<br>        ## Allows people in group wheel to run all commands<br>        %wheel    ALL=(ALL)    ALL<br>        然后修改用户，使其属于root组（wheel），命令如下：<br>        #usermod -g root tommy<br>        修改完毕，现在可以用tommy帐号登录，然后用命令 su – ，即可获得root权限进行操作。<br>    方法二： 修改 /etc/sudoers 文件，找到下面一行，在root下面添加一行，如下所示：<br>        ## Allow root to run any commands anywhere<br>        root    ALL=(ALL)     ALL<br>        tommy   ALL=(ALL)     ALL<br>        修改完毕，现在可以用tommy帐号登录，然后用命令 su – ，即可获得root权限进行操作。<br>    方法三： 修改 /etc/passwd 文件，找到如下行，把用户ID修改为 0 ，如下所示：<br>        tommy:x:500:500:tommy:/home/tommy:/bin/bash<br>        修改后如下 tommy:x:0:500:tommy:/home/tommy:/bin/bash<br>        保存，用tommy账户登录后，直接获取的就是root帐号的权限。<br>友情提醒：虽然方法三看上去简单方便，但一般不推荐使用，推荐使用方法二。</p>
-<p>进程操作<br>1.ps(查看进程命令) ps -ef|grep[进程关键词]<br>2.kill(杀掉进程) kill -9[PID]<br>服务操作<br>    开启服务 service 服务名 start<br>        启动SSH服务 service sshd start<br>    重启服务 service 服务名 restart<br>        启动SSH服务 service sshd restart<br>    关闭服务 service 服务名 stop<br>            关闭SSH服务 service sshd stop<br>常用的软件安装方式<br>    1.源码安装<br>        (1)tar(解压)安装 tar[选项][压缩包]<br>            -c 指定特定目录压缩<br>            -x 从备份文件中还原文件<br>            -t 列出备份文件内容<br>            -r 添加文件到已经压缩的文件<br>            -z 有gzip属性的(后缀是gz的)<br>            -j 有bz2属性的(后缀是bz的)<br>            -Z 有cpmpress属性的<br>            -v 显示所有过程<br>            -O 将文件解压到标准输出<br>            -f 使用文档名称<br>            解压gzip包: tar -zxvf [包名]<br>            解压bz包: tar -jxvf [包名]<br>            解压普通包: tar -xvf [包名]<br>        (2)进入源码目录<br>            ./configure  –prefix=安装位置  –with 安装参数 –sysconfdir=配置文件目录<br>            make<br>            make install<br>    2.rpm(软件包)安装 rpm[选项][软件包]<br>        -ivh 安装显示安装进度<br>        -Uvh 升级软件包<br>        -qpl 列出rpm软件包内的文件信息<br>        -qpi 列出rpm软件包的描述信息<br>        -qf 查找指定文件属于那个rpm软件包<br>        -Va 校验所有的rpm软件包，查找丢失的文件<br>        -e 删除包<br>        -qa 查找已经安装的rpm包<br>        查询是否已经安装了某软件包:rpm -qa|grep [软件包关键字]<br>        查询软件安装位置: rpm -ql 软件关键字<br>        卸载已经安装的软件包： rpm -e 软件包全名<br>        安装软件包并查看进度: rpm -ivh 软件包路径<br>        批量卸载: rpm -qa | grep 服务名 | xargs rpm -evh –nodeps<br>    3.yum(在线)安装<br>        yum list //列出所指定的软件包,后可以加上你想查找的软件包的名字<br>        yum list installed //列出所有已安装的软件包<br>        yum list installed | grep 软件包名<br>        yum info installed //列出所有已安裝的软件包信息<br>        yum install 软件包名 安装<br>        yum remove 软件包名 卸载</p>
-<pre><code>    修改yum的下载源
-        1. 备份本地yum源
-        mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo_bak 
-        2.获取阿里yum源配置文件
-        wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo 
-        3.服务器的包信息下载到本地电脑缓存
-        yum makecache
-        4.更新cache
-        yum -y update  </code></pre><p>下载文件<br>curl -L <a href="https://portainer.io/download/portainer-agent-stack.yml" target="_blank" rel="noopener">https://portainer.io/download/portainer-agent-stack.yml</a> -o /usr/local/docker/portainer/portainer-agent-stack.yml<br>wget -O /etc/yum.repos.d/CentOS-Base.repo <a href="http://mirrors.aliyun.com/repo/Centos-7.repo" target="_blank" rel="noopener">http://mirrors.aliyun.com/repo/Centos-7.repo</a> </p>
-<p>各种包操作命令<br>    tar命令<br>    　　解包：tar zxvf FileName.tar<br>    　　打包：tar czvf FileName.tar DirName<br>    gz命令<br>    　　解压1：gunzip FileName.gz<br>    　　解压2：gzip -d FileName.gz<br>    　　压缩：gzip FileName.tar.gz 和 .tgz<br>    　　解压：tar zxvf FileName.tar.gz<br>    　　压缩：tar zcvf FileName.tar.gz DirName<br>    压缩多个文件：tar zcvf FileName.tar.gz DirName1 DirName2 DirName3 …<br>    bz2命令<br>    　　解压1：bzip2 -d FileName.bz2<br>    　　解压2：bunzip2 FileName.bz2<br>    　　压缩： bzip2 -z FileName.tar.bz2<br>    　　解压：tar jxvf FileName.tar.bz2<br>    　　压缩：tar jcvf FileName.tar.bz2 DirName<br>    bz命令<br>    　　解压1：bzip2 -d FileName.bz<br>    　　解压2：bunzip2 FileName.bz<br>    　　压缩：未知.tar.bz<br>    　　解压：tar jxvf FileName.tar.bz<br>    Z命令<br>    　　解压：uncompress FileName.Z<br>    　　压缩：compress FileName.tar.Z<br>    　　解压：tar Zxvf FileName.tar.Z<br>    　　压缩：tar Zcvf FileName.tar.Z DirName<br>    zip命令<br>    　　解压：unzip FileName.zip<br>    　　压缩：zip FileName.zip DirName<br>type 命令 查询命令来源<br>find<br>    语法  find   path   -option   [   -print ]   [ -exec   -ok   command ]   {} ;</p>
-<pre><code>find 根据下列规则判断 path 和 expression，在命令列上第一个 - ( ) , ! 之前的部份为 path，之后的是 expression。如果 path 是空字串则使用目前路径，如果 expression 是空字串则使用 -print 为预设 expression。
+                <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><pre class=" language-liunx"><code class="language-liunx">查看当前目录 pwd
+清屏 clear
+查看文档 man 命令
+结束进程 q
+清屏 clear
+mut(挂载) mut[设备名称][挂载点]
+查询用户 cat /etc/passwd
+查询组 cat /etc/group
+筛选 
+    grep mysql
+    cat /etc/group | grep mysql
+cd
+    打开指定目录: cd[目录名称]
+    打开当前用户的主目录: cd ～
+    返回上级目录: cd..
+    返回进入目录: cd -
+    打开根目录: cd /
+ls
+    以列的方式查看当前目录下的文件列表: ls -l,ll,ls -ll
+    查看当前目录下所有的文件(包括隐藏文件): ls -a （隐藏文件前面带点）
+    以列表的方式查看当前目录下的所有文件: ls -la
+mkdir
+    新建文件目录: mkdir文件夹名称
+    递归新建多级目录: mkdir -p文件夹名称
+rmkdir(删除文件目录命令):rmkdir[选项]目录名称
+    删除指定目录: rmkdir 目录名称
+rm(删除文件或目录) rm[选项]档案或目录
+    强制删除文件或目录:rm -rf 目录或文件
+    在删除前询问是否确认删除:rm -ri 目录或者文件
+cp(复制文件或目录命令) cp[选项][目录][名称][目录2名称]
+    复制目录1的所有的文件和文件夹到目录2: cp -r[目录1][目录2]
+    执行复制操作是覆盖原有目录前询问用户:cp -ri[目录1][目录2]
+mv(移动文件、修改文件名命令) mv[选项][源文件或目录][目标文件或目录]
+    将文件夹1名称更改为文件2: mv 文件1 文件2
+    将目录1的文件移动到目录2: mv 目录1 目录2
+1.touch(创建文件命令) touch 文件名称
+2.vi/vim(查看、编辑文件) vi 文件名
+    1)命令模式
+        L: 光标以至屏幕最后一行
+        space: 光标右移一个字符
+        backspace:光标左移一个字符
+        N+:光标向上移动N行
+        n+:光标向下移动n行
+    2)输入模式 Esc
+        a,i,r,o,A,I,R,O:编辑模式
+        dd:删除光标当前行
+        ndd:删除n行
+    3)末行模式 :
+        :wq!   保存并退出
+        :q!    强制退出
+        :s/字符串1/字符串2      将文件中出现的字符串1替换成字符串2
+        :set nu    显示所有的行号
+3.cat(查看、编辑文件命令)  cat[-参数选项]文件名称
+    显示一个小的文件的内容: cat 文件名称
+    创建并打开一个新的文件: cat >文件名称
+4.head(查看文件开头内容,默认10行) head[参数][文件]
+    head -n文件名称
+5.tail(查看文件结尾内容命令) tail[-参数选项]文件名称
+    动态加载某个文件的内容(常用于查看日志文件): tail -f文件名称
+    展示文件最后几行的数据: tail -n 行数文件名称
+
+查询主机信息
+    uname -a
+    cat /proc/version 
+exit        退出
+pwd            查看当前目录
+cd        打开目录
+cd ..        返回上一级
+cd /        返回根目录
+ls        查看当前目录下文件不含隐藏文件 
+ls -a:        查看当前目录下文件 含 文件
+ll        列表的方式显示文件 详细信息
+rm -rf        删除文件 直接删除  不建议使用
+rm -ri t.java    删除文件 询问用户 y确定 n不删除
+touch Test.java    创建文件
+mkdir         创建文件夹
+cp t.java ../    复制
+gedit 文件名 查看编辑文件
+vi t.java    编辑文本 按 i,a 进入编辑状态     Esc 退出编辑 
+        ：进入命令模式    wq或x 保存并退出    q! 退出不保存  w保存
+head t.java    从头显示文本 默认10 行  
+head -n     置顶文件开始的几行
+tail        :从文件末尾显示文本
+tail -f        多态加载某个文件的内容
+tail -n        文件结尾N行内容
+cat 看全文
+man touch 文档 　ｑ退出
+su - root    当前用户退出 root 进入  需要密码 低-->高 
+su - lz     高到底  不需要密码
+whoami          当前用户
+groups        用户属于的 用户组
+id：        查看当前用户UID和GID
+useradd 用户名     添加用户
+useradd –u tom 600    添加用户并指定UID 500以上
+passwd 1z 123   修改用户密码 
+usermod –l [新用户名][ 旧用户名]：修改用户登录名
+usermod –g [新组名称][用户名]：修改用户所属分组
+groupadd [组名]：添加分组
+groupadd –g  [组GID][ 组名]：添加分组并指定GID
+make distclean 清空上次安装
+ps -ef|grep redis(服务名) 查看进程
+rpm -qa|grep iptables(软件名) 查看防火墙是否安装
+rpm -qal|grep iptables(软件名) 查看防火墙(软件)的安装位置
+whereis ruby(软件名) 查看软件的安装目录,必须以yum方式安装的
+chkconfig 设置开机自启
+du -h --max-depth=1，这个命令用于查看当前目录，哪个文件占用最大
+du -h --max-depth=1 /home/* 列出home下面所有一级目录的一级目录文件大小
+du -sh * 这个命令也用于查看当前目录下各文件及文件夹占用大小
+du -sh / 查询/目录多大
+du -sh /* 查询/下所有目录多大
+
+查看分区的文件系统
+df -T
+df -h
+
+ss -ntlp | grep nginx
+#确认一下 80/tcp  跟 443/tcp 是否被nginx所使用
+
+./bin/startup.sh ;tail -f logs/catalina.out 启动tomcat
+reboot 重启系统
+
+查看selinux状态： getenforce 
+Enforcing: 表示开启
+Permissive：表示关闭
+
+临时关闭selinux：setenforce 0
+永久关闭selinux（设置完成需要重启）：
+vim /etc/selinux/config
+修改为：SELINUX=disabled</code></pre>
+<h2 id="用户操作命令"><a href="#用户操作命令" class="headerlink" title="用户操作命令"></a>用户操作命令</h2><pre><code>查看当前用户密码 
+    vim /etc/passwd  
+    vim /etc/shadow
+
+1.su(切换用户命令) su[用户名]或su -[用户名] sudo(以root权限运行)
+2.whoami(查看当前登录用户命令)  whoami
+3.groups(查看当前用户所分属分组命令groups) groups
+  创建组 groupadd
+4.id(查看当前用户UID和GID) id
+5.useradd(添加新用户命令)  useradd[选项][用户名]
+    -c 代表comment指定一段注释性描述
+    -d 指定用户主目录
+    -g 指定用户所属的用户组
+    -G 指定用户所属的附加组
+    -u 指定用户的用户名
+    -r 创建系统账户 
+    添加用户: useradd 用户名
+    添加用户并指定UID: useradd -u 指定的UID用户名(最好&gt;500)
+6.passwd(修改用户密码命令) passwd[选项][参数]
+    修改密码: passwd 用户名 密码
+    -d 删除密码,仅有系统管理员才能使用
+    -f 强制执行
+    -k 设置只有密码过期后才能更新
+    -l 锁住密码
+    -s 列出密码的相关信息，仅有系统管理员才能使用
+    -u 解开已上锁的帐号
+7.userdel(删除用户) userdel[选项][用户名]
+    删除用户: userdel 用户名
+    -r 删除用户以及其登录日志等信息
+    -f 强制删除用户，即使用户已登录
+8.usermod(修改用户信息) 
+    修改用户登录名: usermod -l 新用户名 旧用户名
+    修改用户所属分组: usermod -g 新组名称 用户名
+    -c 修改用户帐号的备注文字
+    -d 修改用户登录时的目录
+    -e 修改帐号的有效期
+    -f 修改密码过期后多少天关闭帐号
+    -g 修改用户所属的群组
+    -G 修改用户所属附属组
+    -l 修改用户帐号名称
+    -L 锁定用户密码，使用密码无效
+    -u 修改用户id
+    -U 解除密码锁定
+9.groupadd(添加用户组) groupadd[选项][组名称]
+    修改用户登录名: groupadd 组名
+    修改用户所属分组: groupadd -g组 GID 组名
+    -g 指定工作组的id
+    -r 创建系统工作组
+    -o 允许添加组ID不唯一的工作组</code></pre><h2 id="权限操作"><a href="#权限操作" class="headerlink" title="权限操作"></a>权限操作</h2><h3 id="权限介绍"><a href="#权限介绍" class="headerlink" title="权限介绍"></a>权限介绍</h3><pre><code>drwxrwxr-x. 3 spz spz 21 8月   9 22:16 Learning
+​    -rwxrw-rw-. 1 spz spz 3399 8月  25 12:05 Liunx命令.txt
+​    d:代表是目录
+​    -：代表文件
+​    rwx：r(读),w(写),x(执行)
+​    r -x：代表同组用户具有读、执行的权限，但是没有写的权限
+​    更变权限 chmod[选项][参数]
+​    -c 显示指令执行过程，但只返回更改的部分
+​    -f 不显示错误信息
+​    -r 递归授权
+​    -v 显示指令执行过程</code></pre><h3 id="赋予权限"><a href="#赋予权限" class="headerlink" title="赋予权限"></a>赋予权限</h3><pre><code>chmod   ===》修改文件权限
+​    文件格式有两种格式：数字法、字母法
+​    数字法：
+​    r ===》读取权限，数字代号为 "4"
+​    w ===》写入权限，数字代号为 "2"
+​    x ===》执行权限，数字代号为 "1"
+​    - ===》不具任何权限，数字代号为 "0"
+​    字母法：
+​    u   ===》 user 表示该文件的所有者
+​    g   ===》 group 表示与该文件的所有者属于同一组( group )者，即用户组
+​    o   ===》other 表示其他以外的人
+​    a    ===》all 表示这三者皆是
+chmod 777 test.sh 赋予文件可执行权限
+755 全部权限
+chown -R mysql:mysql /usr/local/mysql
+chown -R mysql mysql/
+chgrp -R mysql mysql/</code></pre><h3 id="赋予root权限"><a href="#赋予root权限" class="headerlink" title="赋予root权限"></a>赋予root权限</h3><p>​    </p>
+<pre><code>方法一： 修改 /etc/sudoers 文件，找到下面一行，把前面的注释（#）去掉
+​        ## Allows people in group wheel to run all commands
+​        %wheel    ALL=(ALL)    ALL
+​        然后修改用户，使其属于root组（wheel），命令如下：
+​        #usermod -g root tommy
+​        修改完毕，现在可以用tommy帐号登录，然后用命令 su – ，即可获得root权限进行操作。
+​    方法二： 修改 /etc/sudoers 文件，找到下面一行，在root下面添加一行，如下所示：
+​        ## Allow root to run any commands anywhere
+​        root    ALL=(ALL)     ALL
+​        tommy   ALL=(ALL)     ALL
+​        修改完毕，现在可以用tommy帐号登录，然后用命令 su – ，即可获得root权限进行操作。
+​    方法三： 修改 /etc/passwd 文件，找到如下行，把用户ID修改为 0 ，如下所示：
+​        tommy:x:500:500:tommy:/home/tommy:/bin/bash
+​        修改后如下 tommy:x:0:500:tommy:/home/tommy:/bin/bash
+​        保存，用tommy账户登录后，直接获取的就是root帐号的权限。
+友情提醒：虽然方法三看上去简单方便，但一般不推荐使用，推荐使用方法二。</code></pre><h2 id="进程操作"><a href="#进程操作" class="headerlink" title="进程操作"></a>进程操作</h2><pre><code>1.ps(查看进程命令) ps -ef|grep[进程关键词]
+2.kill(杀掉进程) kill -9[PID]</code></pre><h2 id="服务操作"><a href="#服务操作" class="headerlink" title="服务操作"></a>服务操作</h2><p>​    </p>
+<pre><code>开启服务 
+    service 服务名 start
+    启动SSH服务 service sshd start
+重启服务
+    service 服务名 restart
+    启动SSH服务 service sshd restart
+关闭服务 
+    service 服务名 stop
+    关闭SSH服务 service sshd stop</code></pre><h2 id="常用的软件安装方式"><a href="#常用的软件安装方式" class="headerlink" title="常用的软件安装方式"></a>常用的软件安装方式</h2><h3 id="1-源码安装"><a href="#1-源码安装" class="headerlink" title="1.源码安装"></a>1.源码安装</h3><pre><code>(1)tar(解压)安装 tar[选项][压缩包]
+            -c 指定特定目录压缩
+            -x 从备份文件中还原文件
+            -t 列出备份文件内容
+            -r 添加文件到已经压缩的文件
+            -z 有gzip属性的(后缀是gz的)
+            -j 有bz2属性的(后缀是bz的)
+            -Z 有cpmpress属性的
+            -v 显示所有过程
+            -O 将文件解压到标准输出
+            -f 使用文档名称
+            解压gzip包: tar -zxvf [包名]
+            解压bz包: tar -jxvf [包名]
+            解压普通包: tar -xvf [包名]
+(2)进入源码目录
+    ./configure  --prefix=安装位置  --with 安装参数 --sysconfdir=配置文件目录
+    make
+    make install</code></pre><h3 id="2-rpm-软件包-安装-rpm-选项-软件包"><a href="#2-rpm-软件包-安装-rpm-选项-软件包" class="headerlink" title="2.rpm(软件包)安装 rpm[选项][软件包]"></a>2.rpm(软件包)安装 rpm[选项][软件包]</h3><pre><code>-ivh 安装显示安装进度
+-Uvh 升级软件包
+-qpl 列出rpm软件包内的文件信息
+-qpi 列出rpm软件包的描述信息
+-qf 查找指定文件属于那个rpm软件包
+-Va 校验所有的rpm软件包，查找丢失的文件
+-e 删除包
+-qa 查找已经安装的rpm包
+
+查询是否已经安装了某软件包:rpm -qa|grep [软件包关键字]
+查询软件安装位置: rpm -ql 软件关键字
+卸载已经安装的软件包： rpm -e 软件包全名
+安装软件包并查看进度: rpm -ivh 软件包路径
+批量卸载: rpm -qa | grep 服务名 | xargs rpm -evh --nodeps</code></pre><h3 id="3-yum-在线-安装"><a href="#3-yum-在线-安装" class="headerlink" title="3.yum(在线)安装"></a>3.yum(在线)安装</h3><pre><code>yum list //列出所指定的软件包,后可以加上你想查找的软件包的名字
+yum list installed //列出所有已安装的软件包
+yum list installed | grep 软件包名
+yum info installed //列出所有已安裝的软件包信息
+yum install 软件包名 安装
+yum remove 软件包名 卸载</code></pre><h4 id="修改yum的下载源"><a href="#修改yum的下载源" class="headerlink" title="修改yum的下载源"></a>修改yum的下载源</h4><pre><code>1. 备份本地yum源
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo_bak 
+2.获取阿里yum源配置文件
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo 
+3.服务器的包信息下载到本地电脑缓存
+yum makecache
+4.更新cache
+yum -y update      </code></pre><h2 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h2><pre><code>curl -L https://portainer.io/download/portainer-agent-stack.yml -o /usr/local/docker/portainer/portainer-agent-stack.yml
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</code></pre><h2 id="各种包操作命令"><a href="#各种包操作命令" class="headerlink" title="各种包操作命令"></a>各种包操作命令</h2><h3 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令　　"></a>tar命令　　</h3><pre><code>解包：tar zxvf FileName.tar
+打包：tar czvf FileName.tar DirName</code></pre><h3 id="gz命令"><a href="#gz命令" class="headerlink" title="gz命令　"></a>gz命令　</h3><pre><code>解压1：gunzip FileName.gz
+解压2：gzip -d FileName.gz
+压缩：gzip FileName.tar.gz 和 .tgz
+解压：tar zxvf FileName.tar.gz
+压缩：tar zcvf FileName.tar.gz DirName
+压缩多个文件：tar zcvf FileName.tar.gz DirName1 DirName2 DirName3 ...</code></pre><h3 id="bz2命令"><a href="#bz2命令" class="headerlink" title="bz2命令"></a>bz2命令</h3><pre><code>解压1：bzip2 -d FileName.bz2
+解压2：bunzip2 FileName.bz2
+压缩： bzip2 -z FileName.tar.bz2
+解压：tar jxvf FileName.tar.bz2
+压缩：tar jcvf FileName.tar.bz2 DirName</code></pre><h3 id="bz命令"><a href="#bz命令" class="headerlink" title="bz命令"></a>bz命令</h3><pre><code>解压1：bzip2 -d FileName.bz
+解压2：bunzip2 FileName.bz
+压缩：未知.tar.bz
+解压：tar jxvf FileName.tar.bz</code></pre><h3 id="Z命令"><a href="#Z命令" class="headerlink" title="Z命令"></a>Z命令</h3><pre><code>解压：uncompress FileName.Z
+压缩：compress FileName.tar.Z
+解压：tar Zxvf FileName.tar.Z
+压缩：tar Zcvf FileName.tar.Z DirName</code></pre><h3 id="zip命令"><a href="#zip命令" class="headerlink" title="zip命令　　"></a>zip命令　　</h3><pre><code>解压：unzip FileName.zip
+压缩：zip FileName.zip DirName</code></pre><h2 id="搜索命令"><a href="#搜索命令" class="headerlink" title="搜索命令"></a>搜索命令</h2><h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><pre><code>find 根据下列规则判断 path 和 expression，在命令列上第一个 - ( ) , ! 之前的部份为 path，之后的是 expression。如果 path 是空字串则使用目前路径，如果 expression 是空字串则使用 -print 为预设 expression。
     expression 中可使用的选项有二三十个之多，在此只介绍最常用的部份。
         -mount, -xdev : 只检查和指定目录在同一个文件系统下的文件，避免列出其它文件系统中的文件
         -amin n : 在过去 n 分钟内被读取过
@@ -513,57 +792,118 @@
         -not expr
         exp1 -or exp2
         exp1, exp2
-示例    find / -name  '文件名'</code></pre><hr>
-<p>查看内核版本<br> uname -a<br> cat /proc/version </p>
-<p>exit        退出<br>pwd            查看当前目录<br>cd        打开目录<br>cd ..        返回上一级<br>cd /        返回根目录<br>ls        查看当前目录下文件不含隐藏文件<br>ls -a:        查看当前目录下文件 含 文件<br>ll        列表的方式显示文件 详细信息<br>rm -rf        删除文件 直接删除  不建议使用<br>rm -ri t.java    删除文件 询问用户 y确定 n不删除<br>touch Test.java    创建文件<br>mkdir         创建文件夹<br>cp t.java ../    复制<br>gedit 文件名 查看编辑文件</p>
-<p>vi t.java    编辑文本 按 i,a 进入编辑状态     Esc 退出编辑<br>        ：进入命令模式    wq或x 保存并退出    q! 退出不保存  w保存<br>head t.java    从头显示文本 默认10 行<br>head -n     置顶文件开始的几行<br>tail        :从文件末尾显示文本<br>tail -f        多态加载某个文件的内容<br>tail -n        文件结尾N行内容<br>cat 看全文<br>man touch 文档 　ｑ退出</p>
-<p>su - root    当前用户退出 root 进入  需要密码 低–&gt;高<br>su - lz     高到底  不需要密码<br>whoami          当前用户<br>groups        用户属于的 用户组<br>id：        查看当前用户UID和GID<br>useradd 用户名     添加用户<br>useradd –u tom 600    添加用户并指定UID 500以上<br>passwd 1z 123   修改用户密码<br>usermod –l [新用户名][ 旧用户名]：修改用户登录名<br>usermod –g [新组名称][用户名]：修改用户所属分组<br>groupadd [组名]：添加分组<br>groupadd –g  [组GID][ 组名]：添加分组并指定GID<br>make distclean 清空上次安装<br>ps -ef|grep redis(服务名) 查看进程<br>rpm -qa|grep iptables(软件名) 查看防火墙是否安装<br>rpm -qal|grep iptables(软件名) 查看防火墙(软件)的安装位置<br>whereis ruby(软件名) 查看软件的安装目录,必须以yum方式安装的<br>chkconfig 设置开机自启<br>du -h –max-depth=1，这个命令用于查看当前目录，哪个文件占用最大<br>du -h –max-depth=1 /home/* 列出home下面所有一级目录的一级目录文件大小<br>du -sh * 这个命令也用于查看当前目录下各文件及文件夹占用大小<br>du -sh / 查询/目录多大<br>du -sh /* 查询/下所有目录多大</p>
-<p>查看分区的文件系统<br>df -T<br>df -h</p>
-<p>ss -ntlp | grep nginx<br>#确认一下 80/tcp  跟 443/tcp 是否被nginx所使用</p>
-<p>./bin/startup.sh ;tail -f logs/catalina.out 启动tomcat<br>reboot 重启系统</p>
-<hr>
-<p>查看selinux状态： getenforce<br>Enforcing: 表示开启<br>Permissive：表示关闭</p>
-<p>临时关闭selinux：setenforce 0<br>永久关闭selinux（设置完成需要重启）：<br>vim /etc/selinux/config<br>修改为：SELINUX=disabled</p>
-<hr>
-<p>centos6<br>关闭防火墙<br>service iptables stop<br>永久关闭防火墙<br>chkconfig iptables off<br>检测防火墙状态<br>service iptables status</p>
-<p>开放端口的方法：<br>方法一：命令行方式<br>               1. 开放端口命令： /sbin/iptables -I INPUT -p tcp –dport 8080 -j ACCEPT<br>               2.保存：/etc/rc.d/init.d/iptables save<br>               3.重启服务：/etc/init.d/iptables restart<br>               4.查看端口是否开放：/sbin/iptables -L -n<br>方法二：直接编辑/etc/sysconfig/iptables文件<br>               1.编辑/etc/sysconfig/iptables文件：vi /etc/sysconfig/iptables<br>                   加入内容并保存：-A RH-Firewall-1-INPUT -m state –state NEW -m tcp -p tcp –dport 8080 -j ACCEPT<br>               2.重启服务：/etc/init.d/iptables restart<br>               3.查看端口是否开放：/sbin/iptables -L -n</p>
-<hr>
-<p>centos7<br>systemctl list-unit-files|grep enabled 查询所有自启软件</p>
-<p>systemctl start firewalld.service 开启防火墙<br>systemctl restart firewalld.service 重启防火墙<br>systemctl stop firewalld.service 关闭防火墙<br>systemctl disable firewalld.service 禁止开机自启防火墙<br>systemctl enable firewalld.service  开机自启防火墙</p>
-<p>firewall-cmd<br>    –zone 作用域<br>    –add-port=6379/tcp 添加端口，格式为：端口/通讯协议<br>    –permanent 写入配置文件永久生效，没有此参数重启后失效<br>firewall-cmd –state 查询防火墙状态<br>firewall-cmd –reload　重启防火墙</p>
-<p>限制port<br>firewall-cmd –list-all 查询防火墙中的所有端口所有<br>firewall-cmd –query-port=6379/tcp 查看端口是否开启<br>firewall-cmd –add-port=6379/tcp 暂时开启端口<br>firewall-cmd –remove-port=6379/tcp 暂时关闭端口<br>firewall-cmd –zone=public –add-port=6379/tcp –permanent 永久开启端口<br>firewall-cmd –zone=public –add-port=6379-4000/tcp –permanent 永久开启端口<br>firewall-cmd –zone=public –remove-port=6379/tcp –permanent 永久关闭端口</p>
-<p>限制IP地址访问<br>比如限制IP为192.168.0.200的地址禁止访问80端口即禁止访问机器<br>firewall-cmd –permanent –add-rich-rule=”rule family=”ipv4” source address=”192.168.0.200” port protocol=”tcp” port=”80” reject”<br>解除刚才被限制的192.168.0.200<br>firewall-cmd –permanent –add-rich-rule=”rule family=”ipv4” source address=”192.168.0.200” port protocol=”tcp” port=”80” accept”<br>如我们需要限制10.0.0.0-10.0.0.255这一整个段的IP，禁止他们访问<br>firewall-cmd –permanent –add-rich-rule=”rule family=”ipv4” source address=”10.0.0.0/24” port protocol=”tcp” port=”80” reject”<br>解除限制<br>firewall-cmd –permanent –add-rich-rule=”rule family=”ipv4” source address=”10.0.0.0/24” port protocol=”tcp” port=”80” accept”<br>查看已经设置的规则<br>firewall-cmd –zone=public –list-rich-rules<br>可尝试直接编辑规则文件<br>vim /etc/firewalld/zones/public.xml</p>
-<p>netstat -ntpl  查询所有正在使用端口</p>
-<p>free -h 查看内存使用率<br>htop 查看cup使用率</p>
-<hr>
-<p>建立软连接，变为全局<br>ln<br>    -b 删除，覆盖以前建立的链接<br>    -d 允许超级用户制作目录的硬链接<br>    -f 强制执行<br>    -i 交互模式，文件存在则提示用户是否覆盖<br>    -n 把符号链接视为一般目录<br>    -s 软链接(符号链接)<br>    -v 显示详细的处理过程<br>示例    ln -s /usr/local/java/jdk1.8.0_144/bin/* /usr/local/bin/</p>
-<hr>
-<p>MySQL–启动和关闭MySQL服务<br>    1.Windows下<br>    启动服务<br>    mysqld –console　　<br>    或　　net start mysql　　<br>    关闭服务<br>    mysqladmin -uroot shudown　　<br>    或　　net stop mysql　　</p>
-<pre><code>2.Linux下
-启动服务
-service mysql start　　　
-关闭服务
-service mysql stop　　
-重启服务
-service restart stop</code></pre><hr>
-<p>宝塔忘记密码<br>cd /www/server/panel &amp;&amp; python tools.pyc panel testpasswd</p>
-<p>Bt-Panel: <a href="http://47.95.7.114:8888" target="_blank" rel="noopener">http://47.95.7.114:8888</a><br>username: z7sh4efx<br>password: 74131998</p>
-<p>Xshell上传文件 yum install lrzsz -y</p>
-<p>ll /proc/进程pid/exe 查询进程文件<br>例如: ll /proc/5684/exe</p>
-<hr>
-<p>如何查找SHELL的进程号并杀死<br>一、shell查找进程并杀死<br>复制代码<br>#!/bin/sh<br>tomcat_id=<code>ps -ef | grep tomcat | grep -v "grep" | awk '{print $2}'</code><br>echo $tomcat_id</p>
-<p>for id in $tomcat_id<br>do<br>    kill -9 $id<br>    echo “killed $id”<br>done<br>复制代码<br>注意：tomcat表示要查找的程序进程名，如：tomcat、8081端口、redis等等。<br>二、linux查找进程并杀死<br>#####查找tomcat进程<br>ps -ef | grep tomcat | grep -v grep | awk ‘{print $2}’<br>#####查找tomcat进程并杀死<br>ps -ef | grep tomcat | grep -v grep | awk ‘{print $2}’ | xargs kill -9</p>
-<p>——————————————–删除———————————————————</p>
-<p>一、Linux下删除文件和文件夹常用命令如下：<br>删除文件： rm file  <a href="http://www.2cto.com" target="_blank" rel="noopener">www.2cto.com</a><br>删除文件夹： rm -rf dir<br>需要注意的是， rmdir 只能够删除 空文件夹。</p>
-<p>二、删除指定文件（夹）之外的所有文件呢？<br>需要在当前文件夹中进行:<br>#删除keep文件之外的所有文件<br>rm -rf !(folder) </p>
-<p>#删除folder1和folder2文件之外的所有文件<br>rm -rf !(folder1 | folder2) </p>
-<p>当前文件夹中结合使用grep和xargs来处理文件名：<br>#删除keep文件之外的所有文件<br>ls | grep -v keep | xargs rm<br>说明： ls先得到当前的所有文件和文件夹的名字， grep -v keep，进行grep正则匹配查找keep，-v参数决定了结果为匹配之外的结果，也就是的到了keep之外的所有文件名，然后 xargs用于从 标准输入获得参数 并且传递给后面的命令，这里使用的命令是 rm，然后由rm删除前面选择的文件。<br>好处：使用了grep来正则表达式来匹配文件名字，可以一次保留多个文件，从而进行更加准确的处理。</p>
-<p>使用find命令代替ls，改进方法3从而能够处理制定文件夹的文件：<br>#删除当前test文件夹中keep文件之外的所有文件<br>find ./test/ | grep -v keep | xargs rm<br>说明，用grep而不用find -name选取名字，因为find选取名字时比较麻烦，对正则表达式支持不够，无法排除指定文件名。</p>
-<p>直接使用find命令删除其他文件：<br>#删除keep以外的其他文件。<br>find ./ -name ‘[^k][^e][^e][^p]*’  -exec rm -rf {} ; </p>
-<p> #删除keep以外的其他文件。推荐！<br>find ./ -name ‘[^k][^e][^e][^p]*’  | xargs rm -rf<br>说明：上面第二行的代码效率高些，原因在于删除多个文件时 -exec会启动多个进程来处理，而xargs会启动一个rm进程来处理。</p>
-<hr>
-<p>systemctl list-unit-files 查询启动项<br>systemctl list-unit-files | grep enabled 启用的<br>systemctl list-unit-files | grep disabled 紧用的</p>
-<p>./configure –prefix=/usr/local/nginx –with-http_stub_status_module –with-http_ssl_module –with-http_dav_module</p>
+示例    find / -name  '文件名'</code></pre><h2 id="centos6"><a href="#centos6" class="headerlink" title="centos6"></a>centos6</h2><pre><code>关闭防火墙
+service iptables stop  
+永久关闭防火墙
+chkconfig iptables off  
+检测防火墙状态
+service iptables status</code></pre><h3 id="开放端口的方法："><a href="#开放端口的方法：" class="headerlink" title="开放端口的方法："></a>开放端口的方法：</h3><h4 id="方法一：命令行方式"><a href="#方法一：命令行方式" class="headerlink" title="方法一：命令行方式"></a>方法一：命令行方式</h4><pre><code>1.开放端口命令： /sbin/iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+c.d/init.d/iptables save
+2.重启服务：/etc/init.d/iptables restart
+3.查看端口是否开放：/sbin/iptables -L -n</code></pre><h4 id="方法二：直接编辑-etc-sysconfig-iptables文件"><a href="#方法二：直接编辑-etc-sysconfig-iptables文件" class="headerlink" title="方法二：直接编辑/etc/sysconfig/iptables文件"></a>方法二：直接编辑/etc/sysconfig/iptables文件</h4><pre><code> 1.编辑/etc/sysconfig/iptables文件：vi /etc/sysconfig/iptables
+   加入内容并保存：-A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
+  2.重启服务：/etc/init.d/iptables restart
+  3.查看端口是否开放：/sbin/iptables -L -n</code></pre><hr>
+<h2 id="centos7"><a href="#centos7" class="headerlink" title="centos7"></a>centos7</h2><pre><code>systemctl list-unit-files|grep enabled 查询所有自启软件
+
+systemctl start firewalld.service 开启防火墙
+systemctl restart firewalld.service 重启防火墙
+systemctl stop firewalld.service 关闭防火墙
+systemctl disable firewalld.service 禁止开机自启防火墙
+systemctl enable firewalld.service  开机自启防火墙
+
+firewall-cmd
+    --zone 作用域
+    --add-port=6379/tcp 添加端口，格式为：端口/通讯协议
+    --permanent 写入配置文件永久生效，没有此参数重启后失效
+firewall-cmd --state 查询防火墙状态
+firewall-cmd --reload　重启防火墙
+
+限制port
+firewall-cmd --list-all 查询防火墙中的所有端口所有
+firewall-cmd --query-port=6379/tcp 查看端口是否开启
+firewall-cmd --add-port=6379/tcp 暂时开启端口
+firewall-cmd --remove-port=6379/tcp 暂时关闭端口
+firewall-cmd --zone=public --add-port=6379/tcp --permanent 永久开启端口
+firewall-cmd --zone=public --add-port=6379-4000/tcp --permanent 永久开启端口
+firewall-cmd --zone=public --remove-port=6379/tcp --permanent 永久关闭端口
+
+限制IP地址访问
+比如限制IP为192.168.0.200的地址禁止访问80端口即禁止访问机器
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.0.200" port protocol="tcp" port="80" reject"
+解除刚才被限制的192.168.0.200
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.0.200" port protocol="tcp" port="80" accept"
+如我们需要限制10.0.0.0-10.0.0.255这一整个段的IP，禁止他们访问
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.0.0.0/24" port protocol="tcp" port="80" reject"
+解除限制
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.0.0.0/24" port protocol="tcp" port="80" accept"
+查看已经设置的规则
+firewall-cmd --zone=public --list-rich-rules
+可尝试直接编辑规则文件
+vim /etc/firewalld/zones/public.xml
+
+netstat -ntpl  查询所有正在使用端口
+
+free -h 查看内存使用率
+htop 查看cup使用率</code></pre><hr>
+<h2 id="建立软连接，变为全局"><a href="#建立软连接，变为全局" class="headerlink" title="建立软连接，变为全局"></a>建立软连接，变为全局</h2><pre><code>ln
+    -b 删除，覆盖以前建立的链接
+    -d 允许超级用户制作目录的硬链接
+    -f 强制执行
+    -i 交互模式，文件存在则提示用户是否覆盖
+    -n 把符号链接视为一般目录
+    -s 软链接(符号链接)
+    -v 显示详细的处理过程
+示例    ln -s /usr/local/java/jdk1.8.0_144/bin/* /usr/local/bin/</code></pre><hr>
+<h2 id="如何查找SHELL的进程号并杀死"><a href="#如何查找SHELL的进程号并杀死" class="headerlink" title="如何查找SHELL的进程号并杀死"></a>如何查找SHELL的进程号并杀死</h2><h3 id="一、shell查找进程并杀死"><a href="#一、shell查找进程并杀死" class="headerlink" title="一、shell查找进程并杀死"></a>一、shell查找进程并杀死</h3><pre><code>复制代码
+#!/bin/sh
+tomcat_id=`ps -ef | grep tomcat | grep -v "grep" | awk '{print $2}'`
+echo $tomcat_id
+
+for id in $tomcat_id
+do
+    kill -9 $id  
+    echo "killed $id"  
+done
+复制代码
+注意：tomcat表示要查找的程序进程名，如：tomcat、8081端口、redis等等</code></pre><h3 id="二、linux查找进程并杀死"><a href="#二、linux查找进程并杀死" class="headerlink" title="二、linux查找进程并杀死"></a>二、linux查找进程并杀死</h3><pre><code>#####查找tomcat进程
+ps -ef | grep tomcat | grep -v grep | awk '{print $2}'
+#####查找tomcat进程并杀死
+ps -ef | grep tomcat | grep -v grep | awk '{print $2}' | xargs kill -9</code></pre><h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><pre><code>一、Linux下删除文件和文件夹常用命令如下：
+删除文件： rm file  www.2cto.com  
+删除文件夹： rm -rf dir
+需要注意的是， rmdir 只能够删除 空文件夹。
+
+二、删除指定文件（夹）之外的所有文件呢？
+需要在当前文件夹中进行:
+#删除keep文件之外的所有文件
+rm -rf !(folder) 
+
+#删除folder1和folder2文件之外的所有文件
+rm -rf !(folder1 | folder2) 
+
+当前文件夹中结合使用grep和xargs来处理文件名：
+#删除keep文件之外的所有文件
+ls | grep -v keep | xargs rm  
+说明： ls先得到当前的所有文件和文件夹的名字， grep -v keep，进行grep正则匹配查找keep，-v参数决定了结果为匹配之外的结果，也就是的到了keep之外的所有文件名，然后 xargs用于从 标准输入获得参数 并且传递给后面的命令，这里使用的命令是 rm，然后由rm删除前面选择的文件。
+好处：使用了grep来正则表达式来匹配文件名字，可以一次保留多个文件，从而进行更加准确的处理。
+
+使用find命令代替ls，改进方法3从而能够处理制定文件夹的文件：
+#删除当前test文件夹中keep文件之外的所有文件
+find ./test/ | grep -v keep | xargs rm 
+说明，用grep而不用find -name选取名字，因为find选取名字时比较麻烦，对正则表达式支持不够，无法排除指定文件名。
+
+直接使用find命令删除其他文件：
+#删除keep以外的其他文件。
+find ./ -name '[^k][^e][^e][^p]*'  -exec rm -rf {} \; 
+
+ #删除keep以外的其他文件。推荐！
+find ./ -name '[^k][^e][^e][^p]*'  | xargs rm -rf  
+说明：上面第二行的代码效率高些，原因在于删除多个文件时 -exec会启动多个进程来处理，而xargs会启动一个rm进程来处理。</code></pre><hr>
+<h2 id="systemctl"><a href="#systemctl" class="headerlink" title="systemctl"></a>systemctl</h2><pre><code>systemctl list-unit-files 查询启动项
+systemctl list-unit-files | grep enabled 启用的
+systemctl list-unit-files | grep disabled 紧用的
+./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_dav_module</code></pre><p>​    </p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -607,7 +947,7 @@ service restart stop</code></pre><hr>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.shipengzhen.top/2018/09/25/yun-wei/liunx-chang-yong-ming-ling/">https://blog.shipengzhen.top/2018/09/25/yun-wei/liunx-chang-yong-ming-ling/</a>
+                    <a href="https://blog.shipengzhen.top/2020/06/20/yun-wei/liunx-chang-yong-ming-ling/">https://blog.shipengzhen.top/2020/06/20/yun-wei/liunx-chang-yong-ming-ling/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -647,6 +987,10 @@ service restart stop</code></pre><hr>
                             
                                 <a href="/tags/%E8%BF%90%E7%BB%B4/">
                                     <span class="chip bg-color">运维</span>
+                                </a>
+                            
+                                <a href="/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                                    <span class="chip bg-color">Liunx常用命令</span>
                                 </a>
                             
                         </div>
@@ -814,57 +1158,60 @@ service restart stop</code></pre><hr>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2018/09/25/shu-ju-ku/postgresql-ji-chu-zhi-shi-zheng-li/">
+                <a href="/2020/06/20/yun-wei/liunx-chang-yong-ming-ling/">
                     <div class="card-image">
                         
-                        <img src="http://static.blinkfox.com/hexoblog_20180925_sql.jpg" class="responsive-img" alt="PostgreSQL基础知识整理">
+                        <img src="http://static.blinkfox.com/hexoblog_20180925_sql.jpg" class="responsive-img" alt="Liunx常用命令">
                         
-                        <span class="card-title">PostgreSQL基础知识整理</span>
+                        <span class="card-title">Liunx常用命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据库操作DMLCREATE TABLECREATE TABLE语句用于创建数据库中的表。语法是：
-CREATE TABLE 表名称 (
-列名1 数据类型,
-列名2 数据类型,
-列名3 数据类型,
-....
-);
-例：
-CREATE TAB
+                            常用命令查看当前目录 pwd
+清屏 clear
+查看文档 man 命令
+结束进程 q
+清屏 clear
+mut(挂载) mut[设备名称][挂载点]
+查询用户 cat /etc/passwd
+查询组 cat /etc/group
+筛选 
+ 
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2018-09-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    运维
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/PostgreSQL/">
-                        <span class="chip bg-color">PostgreSQL</span>
+                    <a href="/tags/%E8%BF%90%E7%BB%B4/">
+                        <span class="chip bg-color">运维</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                        <span class="chip bg-color">Liunx常用命令</span>
                     </a>
                     
                 </div>
@@ -878,49 +1225,31 @@ CREATE TAB
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/09/24/ruan-jian-gong-ju/git/git-zhi-shi-dian-zheng-li/">
+                <a href="/2019/08/20/hou-duan/jpa/fenix-bi-mybatis-geng-jia-qiang-da-de-spring-data-jpa-kuo-zhan-ku/">
                     <div class="card-image">
                         
-                        <img src="http://static.blinkfox.com/hexoblog_20180924_git.jpg" class="responsive-img" alt="Git知识点整理">
+                        <img src="http://static.blinkfox.com/blog/2019/08/20jpa-20190820.png" class="responsive-img" alt="Fenix — 比 MyBatis 更加强大的 Spring Data JPA 扩展库">
                         
-                        <span class="card-title">Git知识点整理</span>
+                        <span class="card-title">Fenix — 比 MyBatis 更加强大的 Spring Data JPA 扩展库</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. Git基本概念。
-repository
-config
-init
-clone
-fetch
-pull
-commit
-push
-branch
-head
-tag
-merge
-conflict
-diff
-log
-show
-status
-
-2. 
+                            
+Fenix（菲尼克斯）是一个比 MyBatis 更加强大，为解决复杂、动态 SQL (JPQL) 而生的 Spring Data JPA 扩展库，目的是辅助开发者更方便、快捷的书写复杂、动态且易于维护的 SQL，支持 XML 和 Java
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    软件工具
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    后端
                                 </a>
                             
                             
@@ -930,8 +1259,16 @@ status
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/JPA/">
+                        <span class="chip bg-color">JPA</span>
+                    </a>
+                    
+                    <a href="/tags/Fenix/">
+                        <span class="chip bg-color">Fenix</span>
                     </a>
                     
                 </div>
