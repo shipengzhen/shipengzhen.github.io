@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.shipengzhen.top/"/>
-  <updated>2020-06-20T07:16:29.081Z</updated>
+  <updated>2021-02-22T01:47:53.508Z</updated>
   <id>https://blog.shipengzhen.top/</id>
   
   <author>
@@ -17,11 +17,96 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Docker 开启远程端口</title>
+    <link href="https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/docker-kai-qi-yuan-cheng-duan-kou/"/>
+    <id>https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/docker-kai-qi-yuan-cheng-duan-kou/</id>
+    <published>2021-02-22T07:15:00.000Z</published>
+    <updated>2021-02-22T01:47:53.508Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Docker-开启远程端口&quot;&gt;&lt;a href=&quot;#Docker-开启远程端口&quot; class=&quot;headerlink&quot; title=&quot;Docker 开启远程端口&quot;&gt;&lt;/a&gt;Docker 开启远程端口&lt;/h2&gt;&lt;h3 id=&quot;方式一&quot;&gt;&lt;a href=&quot;#方式一&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="Liunx常用命令" scheme="https://blog.shipengzhen.top/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    
+      <category term="docker" scheme="https://blog.shipengzhen.top/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS Docker 安装</title>
+    <link href="https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/centos-docker-an-zhuang/"/>
+    <id>https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/centos-docker-an-zhuang/</id>
+    <published>2021-02-22T07:15:00.000Z</published>
+    <updated>2021-02-22T01:20:44.446Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;CentOS-Docker-安装&quot;&gt;&lt;a href=&quot;#CentOS-Docker-安装&quot; class=&quot;headerlink&quot; title=&quot;CentOS Docker 安装&quot;&gt;&lt;/a&gt;CentOS Docker 安装&lt;/h1&gt;&lt;p&gt;Docker 支持以下的
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="Liunx常用命令" scheme="https://blog.shipengzhen.top/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    
+      <category term="docker" scheme="https://blog.shipengzhen.top/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>后端/Java/架构</title>
+    <link href="https://blog.shipengzhen.top/2020/06/28/hou-duan/java/jia-gou/"/>
+    <id>https://blog.shipengzhen.top/2020/06/28/hou-duan/java/jia-gou/</id>
+    <published>2020-06-28T06:14:13.515Z</published>
+    <updated>2020-06-28T06:15:39.443Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Go Rust Julia Java等语言的优缺点与前景分析&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Liunx常用命令</title>
     <link href="https://blog.shipengzhen.top/2020/06/20/yun-wei/liunx-chang-yong-ming-ling/"/>
     <id>https://blog.shipengzhen.top/2020/06/20/yun-wei/liunx-chang-yong-ming-ling/</id>
     <published>2020-06-20T07:15:00.000Z</published>
-    <updated>2020-06-20T07:16:29.081Z</updated>
+    <updated>2020-08-29T11:20:01.654Z</updated>
     
     <summary type="html">
     
@@ -42,6 +127,35 @@
       <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
     
       <category term="Liunx常用命令" scheme="https://blog.shipengzhen.top/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RocketMQ</title>
+    <link href="https://blog.shipengzhen.top/2020/06/20/yun-wei/rocketmq/"/>
+    <id>https://blog.shipengzhen.top/2020/06/20/yun-wei/rocketmq/</id>
+    <published>2020-06-20T07:15:00.000Z</published>
+    <updated>2020-08-05T10:08:33.805Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;RocketMQ&quot;&gt;&lt;a href=&quot;#RocketMQ&quot; class=&quot;headerlink&quot; title=&quot;RocketMQ&quot;&gt;&lt;/a&gt;RocketMQ&lt;/h2&gt;&lt;h4 id=&quot;1-安装RocketMQ&quot;&gt;&lt;a href=&quot;#1-安装RocketMQ&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="MQ" scheme="https://blog.shipengzhen.top/tags/MQ/"/>
     
   </entry>
   
@@ -316,11 +430,11 @@
       <category term="软件工具" scheme="https://blog.shipengzhen.top/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
     
     
+      <category term="Vue" scheme="https://blog.shipengzhen.top/tags/Vue/"/>
+    
       <category term="Typora" scheme="https://blog.shipengzhen.top/tags/Typora/"/>
     
       <category term="Markdown" scheme="https://blog.shipengzhen.top/tags/Markdown/"/>
-    
-      <category term="Vue" scheme="https://blog.shipengzhen.top/tags/Vue/"/>
     
   </entry>
   
@@ -475,115 +589,6 @@
         
         
           &lt;h2 id=&quot;新特性列表&quot;&gt;&lt;a href=&quot;#新特性列表&quot; class=&quot;headerlink&quot; title=&quot;新特性列表&quot;&gt;&lt;/a&gt;新特性列表&lt;/h2&gt;&lt;p&gt;以下是Java6中的引入的部分新特性，相比Java5的新特性就少了很多了。关于Java6更详细的介绍可参考&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://blog.shipengzhen.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java5新特性及使用</title>
-    <link href="https://blog.shipengzhen.top/2018/11/09/hou-duan/java/java5-xin-te-xing-ji-shi-yong/"/>
-    <id>https://blog.shipengzhen.top/2018/11/09/hou-duan/java/java5-xin-te-xing-ji-shi-yong/</id>
-    <published>2018-11-08T16:30:00.000Z</published>
-    <updated>2020-06-19T09:54:33.632Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;新特性列表&quot;&gt;&lt;a href=&quot;#新特性列表&quot; class=&quot;headerlink&quot; title=&quot;新特性列表&quot;&gt;&lt;/a&gt;新特性列表&lt;/h2&gt;&lt;p&gt;以下是Java5中的引入的部分新特性，关于更详细的新特性了解，可参考&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://blog.shipengzhen.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java注解的理解和应用</title>
-    <link href="https://blog.shipengzhen.top/2018/11/08/hou-duan/java/java-zhu-jie-de-li-jie-he-ying-yong/"/>
-    <id>https://blog.shipengzhen.top/2018/11/08/hou-duan/java/java-zhu-jie-de-li-jie-he-ying-yong/</id>
-    <published>2018-11-07T16:30:00.000Z</published>
-    <updated>2020-06-19T09:54:33.644Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;h3 id=&quot;1-什么是注解&quot;&gt;&lt;a href=&quot;#1-什么是注解&quot; class=&quot;headerlink&quot; title=&quot;1.
-        
-      
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://blog.shipengzhen.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java反射基础</title>
-    <link href="https://blog.shipengzhen.top/2018/11/07/hou-duan/java/java-fan-she-ji-chu/"/>
-    <id>https://blog.shipengzhen.top/2018/11/07/hou-duan/java/java-fan-she-ji-chu/</id>
-    <published>2018-11-07T13:40:00.000Z</published>
-    <updated>2020-06-19T09:54:33.642Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h2&gt;&lt;h3 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot; title=&quot;1.
-        
-      
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://blog.shipengzhen.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java IO 知识整理</title>
-    <link href="https://blog.shipengzhen.top/2018/11/05/hou-duan/java/java-io-zhi-shi-zheng-li/"/>
-    <id>https://blog.shipengzhen.top/2018/11/05/hou-duan/java/java-io-zhi-shi-zheng-li/</id>
-    <published>2018-11-05T03:30:00.000Z</published>
-    <updated>2020-06-19T09:54:33.631Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;各IO类关系梳理&quot;&gt;&lt;a href=&quot;#各IO类关系梳理&quot; class=&quot;headerlink&quot; title=&quot;各IO类关系梳理&quot;&gt;&lt;/a&gt;各IO类关系梳理&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;InputStream: Java
         
       
     
