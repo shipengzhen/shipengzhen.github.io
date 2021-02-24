@@ -435,10 +435,6 @@
                                 <span class="chip bg-color">运维</span>
                             </a>
                         
-                            <a href="/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                                <span class="chip bg-color">Liunx常用命令</span>
-                            </a>
-                        
                             <a href="/tags/docker/">
                                 <span class="chip bg-color">docker</span>
                             </a>
@@ -532,16 +528,16 @@ systemctl restart docker.service</code></pre></li>
 <pre><code>vim /usr/lib/systemd/system/docker.service
 
 13 #ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-14 ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock 
+14 ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock
 --containerd=/run/containerd/containerd.sock
 
 #安全认证方式
-14 ExecStart=/usr/bin/dockerd 
+14 ExecStart=/usr/bin/dockerd
 --tlsverify \
 --tlscacert=/etc/docker/ca.pem \
 --tlscert=/etc/docker/server-cert.pem \
---tlskey=/etc/docker/server-key.pem \ 
--H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock 
+--tlskey=/etc/docker/server-key.pem \
+-H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock
 --containerd=/run/containerd/containerd.sock</code></pre></li>
 <li><p>2.重新启动</p>
 <pre><code>systemctl daemon-reload
@@ -549,7 +545,7 @@ systemctl restart docker.service</code></pre></li>
 </ul>
 <h3 id="证书生成流程"><a href="#证书生成流程" class="headerlink" title="证书生成流程"></a>证书生成流程</h3><p><strong>主要流程有三步</strong></p>
 <ol>
-<li>生成ca密钥和证书</li>
+<li>生成 ca 密钥和证书</li>
 </ol>
 <pre class=" language-@"><code class="language-@">#生成ca私钥(使用aes256加密)
 read -s PASSWORD
@@ -557,7 +553,7 @@ openssl genrsa -aes256 -passout pass:$PASSWORD  -out ca-key.pem 2048
 #生成ca证书，填写配置信息
 openssl req -new -x509 -passin "pass:$PASSWORD" -days 365 -key ca-key.pem -sha256 -out ca.pem
 12345</code></pre>
-<p>   2.生成server密钥和证书</p>
+<p>2.生成 server 密钥和证书</p>
 <pre class=" language-@"><code class="language-@">#生成server证书私钥文件
 openssl genrsa -out server-key.pem 2048
 #生成server证书请求文件
@@ -566,7 +562,7 @@ openssl req -subj "/CN=$SERVER" -new -key server-key.pem -out server.csr
 openssl x509 -req -days 365 -in server.csr -CA ca.pem -CAkey ca-key.pem -passin "pass:$PASSWORD" -CAcreateserial  -out server-cert.pem
 
 1234567</code></pre>
-<p>   3.生成client密钥和证书</p>
+<p>3.生成 client 密钥和证书</p>
 <pre class=" language-@"><code class="language-@">#生成client证书RSA私钥文件
 openssl genrsa -out key.pem 2048
 #生成client证书请求文件
@@ -592,7 +588,7 @@ EMAIL="492376344@qq.com"
 echo "开始生成文件"
 
 #切换到生产密钥的目录
-cd /etc/docker   
+cd /etc/docker
 #生成ca私钥(使用aes256加密)
 openssl genrsa -aes256 -passout pass:$PASSWORD  -out ca-key.pem 2048
 #生成ca证书，填写配置信息
@@ -705,10 +701,6 @@ echo "生成文件完成"
                             
                                 <a href="/tags/%E8%BF%90%E7%BB%B4/">
                                     <span class="chip bg-color">运维</span>
-                                </a>
-                            
-                                <a href="/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                                    <span class="chip bg-color">Liunx常用命令</span>
                                 </a>
                             
                                 <a href="/tags/docker/">
@@ -929,10 +921,6 @@ curl -fsSL https://get.docke
                         <span class="chip bg-color">运维</span>
                     </a>
                     
-                    <a href="/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                        <span class="chip bg-color">Liunx常用命令</span>
-                    </a>
-                    
                     <a href="/tags/docker/">
                         <span class="chip bg-color">docker</span>
                     </a>
@@ -948,33 +936,51 @@ curl -fsSL https://get.docke
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/28/hou-duan/java/jia-gou/">
+                <a href="/2021/02/22/yun-wei/nexus/an-zhuang-nexus/">
                     <div class="card-image">
                         
+                        <img src="http://static.blinkfox.com/hexoblog_20180925_sql.jpg" class="responsive-img" alt="安装nexus">
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="后端/Java/架构">
-                        
-                        <span class="card-title">后端/Java/架构</span>
+                        <span class="card-title">安装nexus</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Go Rust Julia Java等语言的优缺点与前景分析https://www.bilibili.com/video/BV1pA411i7Ro/
-对标阿里P8水平Java架构学习路线，清华大牛马士兵带你再造淘宝实战落地；https://
+                            安装nexusdocker 方式安装1.1 创建docker-compose.ymlversion: '3.1'
+services:
+  nexus:
+    image: sonatype/nexus3
+    restart: alwa
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-22
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            shipengzhen
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    运维
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%BF%90%E7%BB%B4/">
+                        <span class="chip bg-color">运维</span>
+                    </a>
+                    
+                    <a href="/tags/nexus/">
+                        <span class="chip bg-color">nexus</span>
+                    </a>
+                    
                 </div>
                 
             </div>

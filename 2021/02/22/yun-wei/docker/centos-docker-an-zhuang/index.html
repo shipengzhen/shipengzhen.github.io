@@ -435,10 +435,6 @@
                                 <span class="chip bg-color">运维</span>
                             </a>
                         
-                            <a href="/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                                <span class="chip bg-color">Liunx常用命令</span>
-                            </a>
-                        
                             <a href="/tags/docker/">
                                 <span class="chip bg-color">docker</span>
                             </a>
@@ -515,7 +511,7 @@
 <p>2、通过其完整的软件包名称安装特定版本，该软件包名称是软件包名称（docker-ce）加上版本字符串（第二列），从第一个冒号（:）一直到第一个连字符，并用连字符（-）分隔。例如：docker-ce-18.09.1。</p>
 <pre><code>$ sudo yum install docker-ce-&lt;VERSION_STRING&gt; docker-ce-cli-&lt;VERSION_STRING&gt; containerd.io</code></pre><p>启动 Docker。</p>
 <pre><code>$ sudo systemctl start docker</code></pre><p>通过运行 hello-world 映像来验证是否正确安装了 Docker Engine-Community 。</p>
-<pre><code>$ sudo docker run hello-world</code></pre><h3 id="安装Docker-Compose"><a href="#安装Docker-Compose" class="headerlink" title="安装Docker-Compose"></a>安装Docker-Compose</h3><h4 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h4><ul>
+<pre><code>$ sudo docker run hello-world</code></pre><h3 id="安装-Docker-Compose"><a href="#安装-Docker-Compose" class="headerlink" title="安装 Docker-Compose"></a>安装 Docker-Compose</h3><h4 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h4><ul>
 <li>下载地址 <a href="https://github.com/docker/compose/releases/" target="_blank" rel="noopener">https://github.com/docker/compose/releases/</a></li>
 </ul>
 <pre><code>$ curl -L https://github.com/docker/compose/releases/download/1.8.0(可以换成任意版本号)/run.sh &gt; /usr/local/bin/docker-compose
@@ -633,10 +629,6 @@ $ docker-compose --version</code></pre><h4 id="方式二"><a href="#方式二" c
                             
                                 <a href="/tags/%E8%BF%90%E7%BB%B4/">
                                     <span class="chip bg-color">运维</span>
-                                </a>
-                            
-                                <a href="/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                                    <span class="chip bg-color">Liunx常用命令</span>
                                 </a>
                             
                                 <a href="/tags/docker/">
@@ -808,37 +800,29 @@ $ docker-compose --version</code></pre><h4 id="方式二"><a href="#方式二" c
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/22/yun-wei/docker/centos-docker-an-zhuang/">
+                <a href="/2021/02/24/yun-wei/git/git-xiu-gai-yuan-cheng-cang-ku-di-zhi/">
                     <div class="card-image">
                         
-                        <img src="http://static.blinkfox.com/hexoblog_20180925_sql.jpg" class="responsive-img" alt="CentOS Docker 安装">
+                        <img src="http://static.blinkfox.com/hexoblog_20180925_sql.jpg" class="responsive-img" alt="Git修改远程仓库地址">
                         
-                        <span class="card-title">CentOS Docker 安装</span>
+                        <span class="card-title">Git修改远程仓库地址</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CentOS Docker 安装Docker 支持以下的 64 位 CentOS 版本：
-
-CentOS 7
-CentOS 8
-更高版本…
-
-
-使用官方安装脚本自动安装安装命令如下：
-curl -fsSL https://get.docke
+                            Git修改远程仓库地址查询远程地址:git remote -v方式一:修改git remote set-url origin [url]方式二:先删后加git remote rm origin
+git remote add origin [
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-24
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -851,7 +835,6 @@ curl -fsSL https://get.docke
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -859,12 +842,8 @@ curl -fsSL https://get.docke
                         <span class="chip bg-color">运维</span>
                     </a>
                     
-                    <a href="/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                        <span class="chip bg-color">Liunx常用命令</span>
-                    </a>
-                    
-                    <a href="/tags/docker/">
-                        <span class="chip bg-color">docker</span>
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>
@@ -919,10 +898,6 @@ vim /etc/docker/daemon.json
                     
                     <a href="/tags/%E8%BF%90%E7%BB%B4/">
                         <span class="chip bg-color">运维</span>
-                    </a>
-                    
-                    <a href="/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                        <span class="chip bg-color">Liunx常用命令</span>
                     </a>
                     
                     <a href="/tags/docker/">

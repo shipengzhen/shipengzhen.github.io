@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.shipengzhen.top/"/>
-  <updated>2021-02-22T01:20:44.446Z</updated>
+  <updated>2021-02-24T02:26:22.553Z</updated>
   <id>https://blog.shipengzhen.top/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Git修改远程仓库地址</title>
+    <link href="https://blog.shipengzhen.top/2021/02/24/yun-wei/git/git-xiu-gai-yuan-cheng-cang-ku-di-zhi/"/>
+    <id>https://blog.shipengzhen.top/2021/02/24/yun-wei/git/git-xiu-gai-yuan-cheng-cang-ku-di-zhi/</id>
+    <published>2021-02-24T02:17:00.000Z</published>
+    <updated>2021-02-24T02:26:22.553Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Git修改远程仓库地址&quot;&gt;&lt;a href=&quot;#Git修改远程仓库地址&quot; class=&quot;headerlink&quot; title=&quot;Git修改远程仓库地址&quot;&gt;&lt;/a&gt;Git修改远程仓库地址&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;查询远程地址:git remote
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="git" scheme="https://blog.shipengzhen.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CentOS Docker 安装</title>
     <link href="https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/centos-docker-an-zhuang/"/>
     <id>https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/centos-docker-an-zhuang/</id>
     <published>2021-02-22T07:15:00.000Z</published>
-    <updated>2021-02-22T01:20:44.446Z</updated>
+    <updated>2021-02-22T03:05:06.026Z</updated>
     
     <summary type="html">
     
@@ -41,8 +70,6 @@
     
       <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
     
-      <category term="Liunx常用命令" scheme="https://blog.shipengzhen.top/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    
       <category term="docker" scheme="https://blog.shipengzhen.top/tags/docker/"/>
     
   </entry>
@@ -52,7 +79,7 @@
     <link href="https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/docker-kai-qi-yuan-cheng-duan-kou/"/>
     <id>https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/docker-kai-qi-yuan-cheng-duan-kou/</id>
     <published>2021-02-22T07:15:00.000Z</published>
-    <updated>2021-02-22T01:47:53.508Z</updated>
+    <updated>2021-02-22T03:04:58.951Z</updated>
     
     <summary type="html">
     
@@ -72,9 +99,36 @@
     
       <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
     
-      <category term="Liunx常用命令" scheme="https://blog.shipengzhen.top/tags/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    
       <category term="docker" scheme="https://blog.shipengzhen.top/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装nexus</title>
+    <link href="https://blog.shipengzhen.top/2021/02/22/yun-wei/nexus/an-zhuang-nexus/"/>
+    <id>https://blog.shipengzhen.top/2021/02/22/yun-wei/nexus/an-zhuang-nexus/</id>
+    <published>2021-02-22T03:04:00.000Z</published>
+    <updated>2021-02-22T03:09:19.755Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;安装nexus&quot;&gt;&lt;a href=&quot;#安装nexus&quot; class=&quot;headerlink&quot; title=&quot;安装nexus&quot;&gt;&lt;/a&gt;安装nexus&lt;/h1&gt;&lt;h2 id=&quot;docker-方式安装&quot;&gt;&lt;a href=&quot;#docker-方式安装&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="nexus" scheme="https://blog.shipengzhen.top/tags/nexus/"/>
     
   </entry>
   
@@ -535,60 +589,6 @@
         
         
           &lt;h2 id=&quot;新特性列表&quot;&gt;&lt;a href=&quot;#新特性列表&quot; class=&quot;headerlink&quot; title=&quot;新特性列表&quot;&gt;&lt;/a&gt;新特性列表&lt;/h2&gt;&lt;p&gt;以下是Java8中的引入的部分新特性。关于Java8新特性更详细的介绍可参考&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://blog.shipengzhen.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java7新特性及使用</title>
-    <link href="https://blog.shipengzhen.top/2018/11/12/hou-duan/java/java7-xin-te-xing-ji-shi-yong/"/>
-    <id>https://blog.shipengzhen.top/2018/11/12/hou-duan/java/java7-xin-te-xing-ji-shi-yong/</id>
-    <published>2018-11-11T16:30:00.000Z</published>
-    <updated>2020-06-19T09:54:33.637Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;新特性列表&quot;&gt;&lt;a href=&quot;#新特性列表&quot; class=&quot;headerlink&quot; title=&quot;新特性列表&quot;&gt;&lt;/a&gt;新特性列表&lt;/h2&gt;&lt;p&gt;以下是Java7中的引入的部分新特性。关于Java7更详细的介绍可参考&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://blog.shipengzhen.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java6新特性及使用</title>
-    <link href="https://blog.shipengzhen.top/2018/11/11/hou-duan/java/java6-xin-te-xing-ji-shi-yong/"/>
-    <id>https://blog.shipengzhen.top/2018/11/11/hou-duan/java/java6-xin-te-xing-ji-shi-yong/</id>
-    <published>2018-11-11T14:40:00.000Z</published>
-    <updated>2020-06-19T09:54:33.634Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;新特性列表&quot;&gt;&lt;a href=&quot;#新特性列表&quot; class=&quot;headerlink&quot; title=&quot;新特性列表&quot;&gt;&lt;/a&gt;新特性列表&lt;/h2&gt;&lt;p&gt;以下是Java6中的引入的部分新特性，相比Java5的新特性就少了很多了。关于Java6更详细的介绍可参考&lt;a
         
       
     
