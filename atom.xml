@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>牛宝宝</title>
+  
+  <subtitle>牛宝宝的blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.shipengzhen.top/"/>
+  <updated>2021-12-23T08:50:09.046Z</updated>
+  <id>https://blog.shipengzhen.top/</id>
+  
+  <author>
+    <name>shipengzhen</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>圣诞老人</title>
+    <link href="https://blog.shipengzhen.top/2021/12/23/sheng-dan/sheng-dan-lao-ren/"/>
+    <id>https://blog.shipengzhen.top/2021/12/23/sheng-dan/sheng-dan-lao-ren/</id>
+    <published>2021-12-23T06:10:00.000Z</published>
+    <updated>2021-12-23T08:50:09.046Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;http://www.shipengzhen.top/static/platform/images/%E5%9C%A3%E8%AF%9E%E8%80%81%E4%BA%BA.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="圣诞" scheme="https://blog.shipengzhen.top/categories/%E5%9C%A3%E8%AF%9E/"/>
+    
+    
+      <category term="圣诞" scheme="https://blog.shipengzhen.top/tags/%E5%9C%A3%E8%AF%9E/"/>
+    
+      <category term="圣诞老人" scheme="https://blog.shipengzhen.top/tags/%E5%9C%A3%E8%AF%9E%E8%80%81%E4%BA%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cmd常用命令</title>
+    <link href="https://blog.shipengzhen.top/2021/12/23/yun-wei/win/cmd-chang-yong-ming-ling/"/>
+    <id>https://blog.shipengzhen.top/2021/12/23/yun-wei/win/cmd-chang-yong-ming-ling/</id>
+    <published>2021-12-23T06:10:00.000Z</published>
+    <updated>2021-12-23T06:15:51.431Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h2&gt;&lt;pre class=&quot; language-liunx&quot;&gt;&lt;code class=&quot;language-liunx&quot;&gt;查看当前目录
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="win" scheme="https://blog.shipengzhen.top/tags/win/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>后端/Java/架构</title>
+    <link href="https://blog.shipengzhen.top/2021/05/06/hou-duan/java/jia-gou/"/>
+    <id>https://blog.shipengzhen.top/2021/05/06/hou-duan/java/jia-gou/</id>
+    <published>2021-05-06T03:43:25.183Z</published>
+    <updated>2021-05-06T03:43:25.183Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Go Rust Julia Java等语言的优缺点与前景分析&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Postman汉化</title>
+    <link href="https://blog.shipengzhen.top/2021/03/09/ruan-jian-gong-ju/postman/postmancn/"/>
+    <id>https://blog.shipengzhen.top/2021/03/09/ruan-jian-gong-ju/postman/postmancn/</id>
+    <published>2021-03-09T01:36:00.000Z</published>
+    <updated>2021-05-06T03:43:25.192Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、Postman汉化版&quot;&gt;&lt;a href=&quot;#一、Postman汉化版&quot; class=&quot;headerlink&quot; title=&quot;一、Postman汉化版&quot;&gt;&lt;/a&gt;一、Postman汉化版&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;码云地址:&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件工具" scheme="https://blog.shipengzhen.top/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Postman" scheme="https://blog.shipengzhen.top/tags/Postman/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git修改远程仓库地址</title>
+    <link href="https://blog.shipengzhen.top/2021/02/24/yun-wei/git/git-xiu-gai-yuan-cheng-cang-ku-di-zhi/"/>
+    <id>https://blog.shipengzhen.top/2021/02/24/yun-wei/git/git-xiu-gai-yuan-cheng-cang-ku-di-zhi/</id>
+    <published>2021-02-24T02:17:00.000Z</published>
+    <updated>2021-05-06T03:43:25.207Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Git修改远程仓库地址&quot;&gt;&lt;a href=&quot;#Git修改远程仓库地址&quot; class=&quot;headerlink&quot; title=&quot;Git修改远程仓库地址&quot;&gt;&lt;/a&gt;Git修改远程仓库地址&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;查询远程地址:git remote
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="git" scheme="https://blog.shipengzhen.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 开启远程端口</title>
+    <link href="https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/docker-kai-qi-yuan-cheng-duan-kou/"/>
+    <id>https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/docker-kai-qi-yuan-cheng-duan-kou/</id>
+    <published>2021-02-22T07:15:00.000Z</published>
+    <updated>2021-05-06T03:43:25.206Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Docker-开启远程端口&quot;&gt;&lt;a href=&quot;#Docker-开启远程端口&quot; class=&quot;headerlink&quot; title=&quot;Docker 开启远程端口&quot;&gt;&lt;/a&gt;Docker 开启远程端口&lt;/h2&gt;&lt;h3 id=&quot;方式一&quot;&gt;&lt;a href=&quot;#方式一&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="docker" scheme="https://blog.shipengzhen.top/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS Docker 安装</title>
+    <link href="https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/centos-docker-an-zhuang/"/>
+    <id>https://blog.shipengzhen.top/2021/02/22/yun-wei/docker/centos-docker-an-zhuang/</id>
+    <published>2021-02-22T07:15:00.000Z</published>
+    <updated>2021-05-06T03:43:25.206Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;CentOS-Docker-安装&quot;&gt;&lt;a href=&quot;#CentOS-Docker-安装&quot; class=&quot;headerlink&quot; title=&quot;CentOS Docker 安装&quot;&gt;&lt;/a&gt;CentOS Docker 安装&lt;/h1&gt;&lt;p&gt;Docker 支持以下的
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="docker" scheme="https://blog.shipengzhen.top/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装nexus</title>
+    <link href="https://blog.shipengzhen.top/2021/02/22/yun-wei/nexus/an-zhuang-nexus/"/>
+    <id>https://blog.shipengzhen.top/2021/02/22/yun-wei/nexus/an-zhuang-nexus/</id>
+    <published>2021-02-22T03:04:00.000Z</published>
+    <updated>2021-05-06T03:43:25.208Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;安装nexus&quot;&gt;&lt;a href=&quot;#安装nexus&quot; class=&quot;headerlink&quot; title=&quot;安装nexus&quot;&gt;&lt;/a&gt;安装nexus&lt;/h1&gt;&lt;h2 id=&quot;docker-方式安装&quot;&gt;&lt;a href=&quot;#docker-方式安装&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="nexus" scheme="https://blog.shipengzhen.top/tags/nexus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RocketMQ</title>
+    <link href="https://blog.shipengzhen.top/2020/06/20/yun-wei/rocketmq/"/>
+    <id>https://blog.shipengzhen.top/2020/06/20/yun-wei/rocketmq/</id>
+    <published>2020-06-20T07:15:00.000Z</published>
+    <updated>2021-05-06T03:43:25.205Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;RocketMQ&quot;&gt;&lt;a href=&quot;#RocketMQ&quot; class=&quot;headerlink&quot; title=&quot;RocketMQ&quot;&gt;&lt;/a&gt;RocketMQ&lt;/h2&gt;&lt;h4 id=&quot;1-安装RocketMQ&quot;&gt;&lt;a href=&quot;#1-安装RocketMQ&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="MQ" scheme="https://blog.shipengzhen.top/tags/MQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Liunx常用命令</title>
+    <link href="https://blog.shipengzhen.top/2020/06/20/yun-wei/linux/liunx-chang-yong-ming-ling/"/>
+    <id>https://blog.shipengzhen.top/2020/06/20/yun-wei/linux/liunx-chang-yong-ming-ling/</id>
+    <published>2020-06-20T07:15:00.000Z</published>
+    <updated>2021-12-23T06:21:29.280Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h2&gt;&lt;pre class=&quot; language-liunx&quot;&gt;&lt;code class=&quot;language-liunx&quot;&gt;查看当前目录
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="运维" scheme="https://blog.shipengzhen.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="Liunx" scheme="https://blog.shipengzhen.top/tags/Liunx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fenix — 比 MyBatis 更加强大的 Spring Data JPA 扩展库</title>
+    <link href="https://blog.shipengzhen.top/2019/08/20/hou-duan/jpa/fenix-bi-mybatis-geng-jia-qiang-da-de-spring-data-jpa-kuo-zhan-ku/"/>
+    <id>https://blog.shipengzhen.top/2019/08/20/hou-duan/jpa/fenix-bi-mybatis-geng-jia-qiang-da-de-spring-data-jpa-kuo-zhan-ku/</id>
+    <published>2019-08-19T16:10:00.000Z</published>
+    <updated>2021-05-06T03:43:25.184Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/blinkfox/fenix&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fenix&lt;/a&gt;（菲尼克斯）是一个比 MyBatis 更加强大，为解决复杂、动态 SQL
+        
+      
+    
+    </summary>
+    
+    
+      <category term="后端" scheme="https://blog.shipengzhen.top/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
+    
+      <category term="JPA" scheme="https://blog.shipengzhen.top/tags/JPA/"/>
+    
+      <category term="Fenix" scheme="https://blog.shipengzhen.top/tags/Fenix/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot2.x 单元测试</title>
+    <link href="https://blog.shipengzhen.top/2019/03/02/hou-duan/spring/springboot2.x-dan-yuan-ce-shi/"/>
+    <id>https://blog.shipengzhen.top/2019/03/02/hou-duan/spring/springboot2.x-dan-yuan-ce-shi/</id>
+    <published>2019-03-02T09:20:00.000Z</published>
+    <updated>2021-05-06T03:43:25.186Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;一个 bug 被隐藏的时间越长，修复这个 bug 的代价就越大。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我曾经在 &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="spring" scheme="https://blog.shipengzhen.top/categories/spring/"/>
+    
+    
+      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
+    
+      <category term="Spring" scheme="https://blog.shipengzhen.top/tags/Spring/"/>
+    
+      <category term="单元测试" scheme="https://blog.shipengzhen.top/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="SpringBoot" scheme="https://blog.shipengzhen.top/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java代码性能评估库Stalker介绍</title>
+    <link href="https://blog.shipengzhen.top/2019/02/14/hou-duan/java/java-dai-ma-xing-neng-ping-gu-ku-stalker-jie-shao/"/>
+    <id>https://blog.shipengzhen.top/2019/02/14/hou-duan/java/java-dai-ma-xing-neng-ping-gu-ku-stalker-jie-shao/</id>
+    <published>2019-02-14T04:00:00.000Z</published>
+    <updated>2021-05-06T03:43:25.174Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://github.com/blinkfox/stalker/blob/master/README.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;English
+        
+      
+    
+    </summary>
+    
+    
+      <category term="后端" scheme="https://blog.shipengzhen.top/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
+    
+      <category term="性能测试" scheme="https://blog.shipengzhen.top/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个极简的 Java ASCII 表格生成库</title>
+    <link href="https://blog.shipengzhen.top/2019/01/25/hou-duan/java/yi-ge-ji-jian-de-java-ascii-biao-ge-sheng-cheng-ku/"/>
+    <id>https://blog.shipengzhen.top/2019/01/25/hou-duan/java/yi-ge-ji-jian-de-java-ascii-biao-ge-sheng-cheng-ku/</id>
+    <published>2019-01-25T02:34:00.000Z</published>
+    <updated>2021-05-06T03:43:25.180Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;一个轻量级、零依赖的 Java ASCII 表格生成库。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;特性&quot;&gt;&lt;a href=&quot;#特性&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="后端" scheme="https://blog.shipengzhen.top/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java面向对象设计之桥接模式</title>
+    <link href="https://blog.shipengzhen.top/2018/12/19/ruan-jian-she-ji/she-ji-mo-shi/java-mian-xiang-dui-xiang-she-ji-zhi-qiao-jie-mo-shi/"/>
+    <id>https://blog.shipengzhen.top/2018/12/19/ruan-jian-she-ji/she-ji-mo-shi/java-mian-xiang-dui-xiang-she-ji-zhi-qiao-jie-mo-shi/</id>
+    <published>2018-12-18T16:20:00.000Z</published>
+    <updated>2021-05-06T03:43:25.197Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;模式动机&quot;&gt;&lt;a href=&quot;#模式动机&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件设计" scheme="https://blog.shipengzhen.top/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
+    
+      <category term="设计模式" scheme="https://blog.shipengzhen.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java面向对象设计之适配器模式</title>
+    <link href="https://blog.shipengzhen.top/2018/12/12/ruan-jian-she-ji/she-ji-mo-shi/java-mian-xiang-dui-xiang-she-ji-zhi-gua-pei-qi-mo-shi/"/>
+    <id>https://blog.shipengzhen.top/2018/12/12/ruan-jian-she-ji/she-ji-mo-shi/java-mian-xiang-dui-xiang-she-ji-zhi-gua-pei-qi-mo-shi/</id>
+    <published>2018-12-12T14:00:00.000Z</published>
+    <updated>2021-05-06T03:43:25.200Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;模式动机&quot;&gt;&lt;a href=&quot;#模式动机&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件设计" scheme="https://blog.shipengzhen.top/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
+    
+      <category term="设计模式" scheme="https://blog.shipengzhen.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件程序设计原则</title>
+    <link href="https://blog.shipengzhen.top/2018/11/24/ruan-jian-she-ji/ruan-jian-cheng-xu-she-ji-yuan-ze/"/>
+    <id>https://blog.shipengzhen.top/2018/11/24/ruan-jian-she-ji/ruan-jian-cheng-xu-she-ji-yuan-ze/</id>
+    <published>2018-11-23T16:30:00.000Z</published>
+    <updated>2021-05-06T03:43:25.201Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件设计" scheme="https://blog.shipengzhen.top/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="Java" scheme="https://blog.shipengzhen.top/tags/Java/"/>
+    
+      <category term="面向对象编程" scheme="https://blog.shipengzhen.top/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="设计原则" scheme="https://blog.shipengzhen.top/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitLab CI/CD 介绍和使用</title>
+    <link href="https://blog.shipengzhen.top/2018/11/22/ruan-jian-gong-ju/devops/gitlab-ci-jie-shao-he-shi-yong/"/>
+    <id>https://blog.shipengzhen.top/2018/11/22/ruan-jian-gong-ju/devops/gitlab-ci-jie-shao-he-shi-yong/</id>
+    <published>2018-11-22T15:30:00.000Z</published>
+    <updated>2021-05-06T03:43:25.193Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、持续集成介绍&quot;&gt;&lt;a href=&quot;#一、持续集成介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件工具" scheme="https://blog.shipengzhen.top/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="GitLab CI" scheme="https://blog.shipengzhen.top/tags/GitLab-CI/"/>
+    
+      <category term="DevOps" scheme="https://blog.shipengzhen.top/tags/DevOps/"/>
+    
+      <category term="Jenkins" scheme="https://blog.shipengzhen.top/tags/Jenkins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue 文档风格的 Typora 主题</title>
+    <link href="https://blog.shipengzhen.top/2018/11/19/ruan-jian-gong-ju/markdown/vue-wen-dang-feng-ge-de-typora-zhu-ti/"/>
+    <id>https://blog.shipengzhen.top/2018/11/19/ruan-jian-gong-ju/markdown/vue-wen-dang-feng-ge-de-typora-zhu-ti/</id>
+    <published>2018-11-18T16:30:00.000Z</published>
+    <updated>2021-05-06T03:43:25.192Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/blinkfox/typora-vue-theme&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;typora-vue-theme&lt;/a&gt; 是 Typora
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件工具" scheme="https://blog.shipengzhen.top/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Vue" scheme="https://blog.shipengzhen.top/tags/Vue/"/>
+    
+      <category term="Typora" scheme="https://blog.shipengzhen.top/tags/Typora/"/>
+    
+      <category term="Markdown" scheme="https://blog.shipengzhen.top/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CPU多级缓存</title>
+    <link href="https://blog.shipengzhen.top/2018/11/18/ruan-jian-gong-ju/cup/cpu-duo-ji-huan-cun/"/>
+    <id>https://blog.shipengzhen.top/2018/11/18/ruan-jian-gong-ju/cup/cpu-duo-ji-huan-cun/</id>
+    <published>2018-11-18T13:55:00.000Z</published>
+    <updated>2021-05-06T03:43:25.190Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、什么是CPU缓存&quot;&gt;&lt;a href=&quot;#一、什么是CPU缓存&quot; class=&quot;headerlink&quot; title=&quot;一、什么是CPU缓存&quot;&gt;&lt;/a&gt;一、什么是CPU缓存&lt;/h2&gt;&lt;h3 id=&quot;1-CPU缓存的来历&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件工具" scheme="https://blog.shipengzhen.top/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="CPU缓存" scheme="https://blog.shipengzhen.top/tags/CPU%E7%BC%93%E5%AD%98/"/>
+    
+  </entry>
+  
+</feed>
