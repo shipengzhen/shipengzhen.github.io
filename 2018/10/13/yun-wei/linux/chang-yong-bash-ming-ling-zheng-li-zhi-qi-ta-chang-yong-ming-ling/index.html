@@ -29,7 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -481,9 +483,11 @@
 <span class="token function">hostname</span> blinkfox-system
 
 <span class="token comment" spellcheck="true"># 使用 -F 选项，从指定的文件中读取主机名</span>
-<span class="token function">hostname</span> -F /root/hostname.txt</code></pre>
+<span class="token function">hostname</span> -F /root/hostname.txt
+</code></pre>
 <h2 id="2-uptime-查看系统运行时间"><a href="#2-uptime-查看系统运行时间" class="headerlink" title="2. uptime - 查看系统运行时间"></a>2. uptime - 查看系统运行时间</h2><p><code>uptime</code>命令用于打印系统的运行时间等信息。使用如下：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">uptime</span></code></pre>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">uptime</span>
+</code></pre>
 <h2 id="3-w、who-列出登录的用户"><a href="#3-w、who-列出登录的用户" class="headerlink" title="3. w、who - 列出登录的用户"></a>3. w、who - 列出登录的用户</h2><p><code>w</code>命令用于显示登录用户及他们当前运行的进程。输入的内容格式如下：</p>
 <pre class=" language-bash"><code class="language-bash">w
 
@@ -491,9 +495,11 @@
 22:42  up 18 days, 1 hr, 2 users, load averages: 1.23 1.79 1.75
 USER     TTY      FROM              LOGIN@  IDLE WHAT
 blinkfox console  -                日19   6days -
-blinkfox s000     -                五23       - w</code></pre>
+blinkfox s000     -                五23       - w
+</code></pre>
 <p><code>who</code>命令有与<code>w</code>命令类似的用途，但它的功能比<code>w</code>命令更强大一些。语法格式如下：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">who</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>FILE <span class="token operator">|</span> ARG1 ARG2<span class="token punctuation">]</span></code></pre>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">who</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>FILE <span class="token operator">|</span> ARG1 ARG2<span class="token punctuation">]</span>
+</code></pre>
 <p><code>who</code>常用命令如下：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 显示当前登录的所有用户信息</span>
 <span class="token function">who</span>
@@ -511,9 +517,11 @@ blinkfox s000     -                五23       - w</code></pre>
 <span class="token function">who</span> -r
 
 <span class="token comment" spellcheck="true"># 显示所有登录用户的用户名和登录用户数</span>
-<span class="token function">who</span> -q</code></pre>
+<span class="token function">who</span> -q
+</code></pre>
 <h2 id="4-uname-查看系统信息"><a href="#4-uname-查看系统信息" class="headerlink" title="4. uname - 查看系统信息"></a>4. uname - 查看系统信息</h2><p><code>uname</code>命令用于打印内核名称和版本、主机名等系统信息。命令的语法如下所示：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">uname</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>.</code></pre>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">uname</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>.
+</code></pre>
 <p>常用使用方式如下：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 只打印内核的名称</span>
 <span class="token function">uname</span>
@@ -534,10 +542,12 @@ blinkfox s000     -                五23       - w</code></pre>
 <span class="token function">uname</span> -i
 
 <span class="token comment" spellcheck="true"># 使用 -a 选项，打印上述所有示例中的信息</span>
-<span class="token function">uname</span> -a</code></pre>
+<span class="token function">uname</span> -a
+</code></pre>
 <h2 id="5-date-显示和设置系统日期和时间"><a href="#5-date-显示和设置系统日期和时间" class="headerlink" title="5. date - 显示和设置系统日期和时间"></a>5. date - 显示和设置系统日期和时间</h2><p><code>date</code>命令用于以多种格式显示日期和时间，或设置系统的日期和时间。<code>date</code>命令的语法如下所示：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">date</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>+FORMAT<span class="token punctuation">]</span>
-<span class="token function">date</span> <span class="token punctuation">[</span>-u<span class="token operator">|</span>--utc<span class="token operator">|</span>--universal<span class="token punctuation">]</span> <span class="token punctuation">[</span>MMDDhhmm<span class="token punctuation">[</span><span class="token punctuation">[</span>CC<span class="token punctuation">]</span>YY<span class="token punctuation">]</span><span class="token punctuation">[</span>.ss<span class="token punctuation">]</span><span class="token punctuation">]</span></code></pre>
+<span class="token function">date</span> <span class="token punctuation">[</span>-u<span class="token operator">|</span>--utc<span class="token operator">|</span>--universal<span class="token punctuation">]</span> <span class="token punctuation">[</span>MMDDhhmm<span class="token punctuation">[</span><span class="token punctuation">[</span>CC<span class="token punctuation">]</span>YY<span class="token punctuation">]</span><span class="token punctuation">[</span>.ss<span class="token punctuation">]</span><span class="token punctuation">]</span>
+</code></pre>
 <p>常用使用命令如下：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 以默认格式显示系统的当前日期时间</span>
 <span class="token function">date</span>
@@ -573,9 +583,11 @@ blinkfox s000     -                五23       - w</code></pre>
 <span class="token function">date</span> -s <span class="token string">"01:01:01 2012-05-23"</span> <span class="token comment" spellcheck="true"># 这样可以设置全部时间 </span>
 <span class="token function">date</span> -s <span class="token string">"01:01:01 20120523"</span> <span class="token comment" spellcheck="true"># 这样可以设置全部时间</span>
 <span class="token function">date</span> -s <span class="token string">"2012-05-23 01:01:01"</span> <span class="token comment" spellcheck="true"># 这样可以设置全部时间 </span>
-<span class="token function">date</span> -s <span class="token string">"20120523 01:01:01"</span> <span class="token comment" spellcheck="true"># 这样可以设置全部时间</span></code></pre>
+<span class="token function">date</span> -s <span class="token string">"20120523 01:01:01"</span> <span class="token comment" spellcheck="true"># 这样可以设置全部时间</span>
+</code></pre>
 <h2 id="6-id-显示用户属性"><a href="#6-id-显示用户属性" class="headerlink" title="6. id - 显示用户属性"></a>6. id - 显示用户属性</h2><p><code>id</code>命令用于打印输出用户<code>uid</code>、<code>gid</code>、用户名和组名等用户身份信息。<code>id</code>命令的语法如下所示：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">id</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>USERNAME<span class="token punctuation">]</span></code></pre>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">id</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>USERNAME<span class="token punctuation">]</span>
+</code></pre>
 <p>常见使用命令如下：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 输出当前用户的uid、用户名、gid、组名及用户属于的群组信息</span>
 <span class="token function">id</span>
@@ -596,26 +608,9 @@ blinkfox s000     -                五23       - w</code></pre>
 <span class="token function">id</span> -G root
 
 <span class="token comment" spellcheck="true"># -G 与 -n 选项结合使用，输出账号所属的所有群组的名称</span>
-<span class="token function">id</span> -Gn root</code></pre>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+<span class="token function">id</span> -Gn root
+</code></pre>
+
             </div>
             <hr/>
 

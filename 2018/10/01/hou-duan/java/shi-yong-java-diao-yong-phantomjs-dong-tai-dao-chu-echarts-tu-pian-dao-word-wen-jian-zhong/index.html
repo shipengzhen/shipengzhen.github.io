@@ -29,7 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -473,12 +475,12 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在一个项目中遇到导出为Word文件的问题，导出Word的功能很简单，但是导出Word文件中包含数据库动态查询的统计数据而生成的Echarts图片，且导出Word的时机又是在凌晨的服务器定时执行，所以不能通过客户端访问统计页面时再去生成。</p>
-<p>服务端语言使用Java语言，最开始考虑使用<a href="http://www.jfree.org/jfreechart/index.html" target="_blank" rel="noopener">JFreeChart</a>来生成统计图片，但是JFreeChart生成的图片很丑，且和ECharts的统计图效果截然不同。所以最终抛弃了使用<code>JFreeChart</code>，而采用了在服务端使用Java调用<a href="http://phantomjs.org/" target="_blank" rel="noopener">PhantomJS</a>的指令来导出Ehcarts图片。所以主要的技术方案选型如下：</p>
+<p>服务端语言使用Java语言，最开始考虑使用<a target="_blank" rel="noopener" href="http://www.jfree.org/jfreechart/index.html">JFreeChart</a>来生成统计图片，但是JFreeChart生成的图片很丑，且和ECharts的统计图效果截然不同。所以最终抛弃了使用<code>JFreeChart</code>，而采用了在服务端使用Java调用<a target="_blank" rel="noopener" href="http://phantomjs.org/">PhantomJS</a>的指令来导出Ehcarts图片。所以主要的技术方案选型如下：</p>
 <ul>
 <li><code>poi-tl</code>，一个简单的基于<code>Word</code>模版生成<code>Word</code>的工具。</li>
 <li><code>PhantomJS</code>，一个基于<code>webkit</code>内核的无头浏览器，可在服务端程序实现加载、操作页面等功能</li>
 </ul>
-<h2 id="使用poi-tl导出Word"><a href="#使用poi-tl导出Word" class="headerlink" title="使用poi-tl导出Word"></a>使用poi-tl导出Word</h2><h3 id="poi-tl介绍"><a href="#poi-tl介绍" class="headerlink" title="poi-tl介绍"></a>poi-tl介绍</h3><p>使用Java导出Word通常采用的是<a href="https://poi.apache.org/" target="_blank" rel="noopener">Apache POI</a>的库，但是使用POI来导出Word，会书写大量的段落、样式等细节代码，代码量巨大，而且不易于维护。通过<a href="https://github.com/Sayi/poi-tl" target="_blank" rel="noopener">poi-tl</a>只需要制作导出的模版，服务端一行代码调用，传入模版路径和<code>Map</code>或者<code>Bean</code>即可生成Word模版，代码量大大降低，以后导出样式不满意的时候，只需要修改Word模版文件即可。</p>
+<h2 id="使用poi-tl导出Word"><a href="#使用poi-tl导出Word" class="headerlink" title="使用poi-tl导出Word"></a>使用poi-tl导出Word</h2><h3 id="poi-tl介绍"><a href="#poi-tl介绍" class="headerlink" title="poi-tl介绍"></a>poi-tl介绍</h3><p>使用Java导出Word通常采用的是<a target="_blank" rel="noopener" href="https://poi.apache.org/">Apache POI</a>的库，但是使用POI来导出Word，会书写大量的段落、样式等细节代码，代码量巨大，而且不易于维护。通过<a target="_blank" rel="noopener" href="https://github.com/Sayi/poi-tl">poi-tl</a>只需要制作导出的模版，服务端一行代码调用，传入模版路径和<code>Map</code>或者<code>Bean</code>即可生成Word模版，代码量大大降低，以后导出样式不满意的时候，只需要修改Word模版文件即可。</p>
 <blockquote>
 <p><strong>注意</strong>：<code>poi-tl</code>只能生成<code>docx</code>文件，对word2007之前的<code>doc</code>文档则不支持。</p>
 </blockquote>
@@ -486,7 +488,8 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.deepoove<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>poi-tl<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre>
 <blockquote>
 <p><strong>注</strong>：该包带入了<code>POI3.16</code>，如果系统中本身有低于<code>3.15</code>版本的<code>POI</code>，需要排除掉，否则生成Word时会报错。</p>
 </blockquote>
@@ -498,9 +501,9 @@
  * @author blinkfox on 2017-06-28.
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BaseProp</span> <span class="token punctuation">{</span>
-
+    
     <span class="token keyword">protected</span> String baseProp<span class="token punctuation">;</span>
-
+    
     <span class="token comment" spellcheck="true">/**
      * 构造方法.
      * @param baseProp 基础属性
@@ -516,8 +519,9 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setBaseProp</span><span class="token punctuation">(</span>String baseProp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span>baseProp <span class="token operator">=</span> baseProp<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span></code></pre>
+    
+<span class="token punctuation">}</span>
+</code></pre>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 测试旅游信息的bean.
  * @author blinkfox on 2017-06-28.
@@ -623,7 +627,8 @@
         <span class="token keyword">this</span><span class="token punctuation">.</span>pic <span class="token operator">=</span> pic<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>最后，是模拟调用示例：</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * poi-tl库的使用示例.
@@ -679,7 +684,8 @@
         log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"通过'poi-tl'导出word成功!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>最后，在导出的文件夹中可查看生成的word文件，如下所示：</p>
 <p><img src="http://static.blinkfox.com/test_out_result.jpg" alt="生成的Word文件结果"></p>
 <h2 id="Java调用PhantomJS导出Ehcarts图片"><a href="#Java调用PhantomJS导出Ehcarts图片" class="headerlink" title="Java调用PhantomJS导出Ehcarts图片"></a>Java调用PhantomJS导出Ehcarts图片</h2><h3 id="PhantomJS介绍"><a href="#PhantomJS介绍" class="headerlink" title="PhantomJS介绍"></a>PhantomJS介绍</h3><p><code>PhantomJS</code>是一个基于<code>webkit</code>内核的无头浏览器，即没有UI界面的一个浏览器，只是其内的点击、翻页等人为相关操作需要程序设计实现。<code>PhantomJS</code>提供JavaScript API接口，即通过编写js程序可以直接与<code>webkit</code>内核交互，在此之上可以结合Java语言等，通过java调用js等相关操作，从而解决了以前<code>c/c++</code>才能比较好的基于<code>webkit</code>开发优质采集器的限制。</p>
@@ -696,7 +702,8 @@
 <span class="token function">source</span> ~/.bashrc
 
 <span class="token comment" spellcheck="true"># 测试PhantomJS是否安装成功，如果打出了版本信息，即安装成功.</span>
-phantomjs -v</code></pre>
+phantomjs -v
+</code></pre>
 <h3 id="demo示例-1"><a href="#demo示例-1" class="headerlink" title="demo示例"></a>demo示例</h3><p>这个demo的需求是这样的，我们使用Java调用<code>PhantomJS</code>的指令来在服务端加载含<code>ECharts</code>统计的图<code>html</code>文件，然后调用<code>ECharts</code>的生成图片方法，将图片传输到Java后台最终实现保存图片到指定路径中。</p>
 <p>首先，制作<code>ECharts</code>的html页面，示例页面如下代码如下：</p>
 <pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
@@ -756,7 +763,8 @@ myChart<span class="token punctuation">.</span><span class="token function">setO
 <span class="token punctuation">}</span>
 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
 <p>然后，使用<code>Servlet</code>来写一个服务端代码，用来获取<code>Base64</code>的图片信息并在后端解析保存图片，<code>Servlet</code>代码如下：</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 保存Echarts统计图片的Servlet.
@@ -829,7 +837,8 @@ myChart<span class="token punctuation">.</span><span class="token function">setO
         <span class="token keyword">return</span> picPath<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>然后，是书写PhantomJS脚本<code>echarts_load.js</code>来加载和调用图片下载的代码：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> system <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'system'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> page <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpage'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -871,7 +880,8 @@ page<span class="token punctuation">.</span><span class="token function">open</s
     <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         phantom<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>最后，是使用<code>Java</code>来调用<code>PhantomJS</code>的指令，代码如下：</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * HttpTest.
@@ -908,28 +918,11 @@ page<span class="token punctuation">.</span><span class="token function">open</s
         <span class="token function">downloadImage</span><span class="token punctuation">(</span><span class="token string">"http://127.0.0.1:8080/test/echart_test/test_echarts.html"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>通过调用测试代码即可在指定目录生成<code>Echarts</code>的图片啦！</p>
 <p>联系上面生成<code>Word</code>的功能，两个功能一结合即可动态导出<code>ECharts</code>图片到<code>Word</code>文件中。</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 

@@ -29,7 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -477,7 +479,9 @@
 viewerDocument.getRoot().search({'type':'geometry','role':'2d'}); viewerDocument.getRoot().search({'type':'geometry','role':'3d'}); 
 //加载模型节点 
 var viewables = viewerDocument.getRoot().search({'type':'geometry'}); 
-viewer.loadDocumentNode(viewerDocument, viewables[2]);     </code></pre><p><strong>2.获取选择节点的数据信息</strong> </p>
+viewer.loadDocumentNode(viewerDocument, viewables[2]);     
+</code></pre>
+<p><strong>2.获取选择节点的数据信息</strong> </p>
 <pre><code>//得到当前选择集的对象集合（DbId数组）
 var sel = NOP_VIEWER.getSelection();
 //考察选择集中第一个对象的属性信息 
@@ -490,29 +494,57 @@ NOP_VIEWER.getProperties(sel[0],function(objProp){
             //console.log('name: ' + Prop.displayName + '    value:    ' +Prop.displayValue);
         }
      }
-});</code></pre><p><strong>3.聚焦元素、选择元素</strong> </p>
+});
+</code></pre>
+<p><strong>3.聚焦元素、选择元素</strong> </p>
 <pre><code>viewer.getSelection()   
 //测试获取选中的Id viewer.fitToView([19547]) 
 //聚焦元素 viewer.getAggregateSelection() 
 //获取多个模型 选择的数据  viewer.clearSelection()
 //清空选择 viewer.select(9562,viewer.impl.modelQueue().getModels()[0]); 
 //选择元素，指定模型 viewer.impl.modelQueue().getModels() 
-//获取模型列表     viewer.fitToView([19547],viewer.impl.modelQueue().getModels()[0]) viewer.select([4299,2652],null)</code></pre><p><strong>4.获取具体元素集合：</strong> </p>
-<pre><code>//获取元素 viewer.search('"基本墙"', function(dbids){     console.log(dbids); }, function(error){     console.log(error); }, ['name'] ); //获取元素集合 //返回元素的所有属性 viewer.getProperties(viewer.getSelection()[0],function(pbjProp){ console.log(pbjProp) })  //方法只返回dbid列表的指定属性 viewer.model.getBulkProperties2([3810], ['Category'],function(elements){     console.log(elements);},null) </code></pre><p><strong>5.同步浏览多个视图：</strong>                  </p>
-<pre><code>var options = {    viewports: [        function(id) { return id === 2||id === 3; },function(id) { return id === 1; },    ] }; viewer.loadExtension('Autodesk.SplitScreen', options); //获取加载的Model viewer.impl.modelQueue().getModels()[2].id viewer.impl.modelQueue().getModels()[2].getData().urn //添加颜色 this.viewer.setThemingColor( 3964, new THREE.Vector4( 255 / 255, 0, 0, 1 ),viewer.impl.modelQueue().getModels()[0]);</code></pre><p><strong>6.元素信息</strong> </p>
-<pre><code> it.enumNodeChildren(viewer.getSelection()[0], function(fragId) {   console.log(fragId) });  //获取元素碎片id： viewer.model.getData().instanceTree.enumNodeFragments(viewer.getSelection()[0], function(fragId) {     console.log(fragId); });  var fragProxy = viewer.impl.getFragmentProxy(viewer.model,fragId) fragProxy.frags fragProxy.frags.geoms.geomBoxes   </code></pre><p><strong>7.视点保存</strong> </p>
-<pre><code> var cam = viewer.getState() viewer.restoreState(cam)</code></pre><p><strong>8.剖面</strong> </p>
-<pre><code> Vector4 {x: 0, y: 0, z: -1, w: 1} :  负方向 剖的是负方向的元素(去除) w=1 距离00点 1 的位置 (1 往下的都看不到)  Vector4 {x: 0, y: 0, z: 1, w: 1} : 正方向  剖的正方向的元素(去除)  w=1 就是 距离00点 1的位置 即-1 的位置    -1 往上的都看不到 viewer.setCutPlanes( [ new THREE.Vector4( 0, 0, 1,1.575 )] );</code></pre><p><strong>9.通过 externalId 查询dbId</strong> </p>
-<pre><code>  ar extId = 'd4f17bf0-ae11-48af-9184-8555e6c79f66-0002c195' viewer.model.getExternalIdMapping( function(map){ var dbid = map[extId]; console.log(dbid);   viewer.select(dbid);</code></pre><p><strong>10.获取元素的父节点</strong> </p>
-<pre><code> viewer.model.getData().instanceTree.getNodeParentId(2876) //隐藏父节点 子节点也会隐藏  </code></pre><p><strong>11.完全隐藏元素</strong> </p>
-<pre><code>viewer.impl.visibilityManager.setNodeOff(node, true);</code></pre><p><strong>12.更新视图：</strong> </p>
-<pre><code>viewer.impl.invalidate(true, true, true)</code></pre><p><strong>13.更改构件材质：</strong>  </p>
-<pre><code> //步骤一： 获取元素 fragId  viewer.model.getData().instanceTree.enumNodeFragments(viewer.getSelection()[0], function(fragId) {     console.log(fragId); }); //步骤二：创建材质 var material = new THREE.MeshBasicMaterial(        {color: 0xF5F5F5, transparent: true,opacity: 0.1 }); //步骤三：设置材质 NOP_VIEWER.model.getFragmentList().setMaterial(         fragId, material   );   //步骤一得到的  fragId //步骤四:刷新页面 NOP_VIEWER.impl.invalidate(true,true,true);                </code></pre><p><strong>14.获取标高信息</strong> </p>
-<pre><code> function onDocumentLoadSuccess(viewerDocument) {    var defaultModel = viewerDocument.getRoot().getDefaultGeometry();    var aecData=Autodesk.Viewing.Document.getAecModelData(defaultModel);     viewer.aecData=aecData;    console.log(aecData)     viewer.loadDocumentNode(viewerDocument, defaultModel); }  </code></pre><p><strong>15.去除forgeView中自带的扩展(全部去除)</strong> </p>
-<pre><code>viewer = new Autodesk.Viewing.GuiViewer3D(htmlDiv,config3d); 改成==&gt; viewer = new Autodesk.Viewing.Viewer3D(htmlDiv,config3d);</code></pre><p>​    <img src="http://note.youdao.com/yws/public/resource/4dd8a96d80ef0f6d5e1dff7b72fc76ac/xmlnote/024BF3DD96AB4A3997EDE7024444892A/13747" alt="0"></p>
-<h1 id="自定义-Forge-Viewer-右键菜单（Context-Menu）"><a href="#自定义-Forge-Viewer-右键菜单（Context-Menu）" class="headerlink" title="自定义 Forge Viewer 右键菜单（Context Menu）"></a><a href="https://segmentfault.com/a/1190000011867872" target="_blank" rel="noopener">自定义 Forge Viewer 右键菜单（Context Menu）</a></h1><p><a href="https://segmentfault.com/t/autodesk-forge" target="_blank" rel="noopener">autodesk-forge</a><a href="https://segmentfault.com/t/viewer" target="_blank" rel="noopener">viewer</a><a href="https://segmentfault.com/t/javascript" target="_blank" rel="noopener">javascript</a></p>
+//获取模型列表     viewer.fitToView([19547],viewer.impl.modelQueue().getModels()[0]) viewer.select([4299,2652],null)
+</code></pre>
+<p><strong>4.获取具体元素集合：</strong> </p>
+<pre><code>//获取元素 viewer.search('"基本墙"', function(dbids){     console.log(dbids); }, function(error){     console.log(error); }, ['name'] ); //获取元素集合 //返回元素的所有属性 viewer.getProperties(viewer.getSelection()[0],function(pbjProp){ console.log(pbjProp) })  //方法只返回dbid列表的指定属性 viewer.model.getBulkProperties2([3810], ['Category'],function(elements){     console.log(elements);},null) 
+</code></pre>
+<p><strong>5.同步浏览多个视图：</strong>                  </p>
+<pre><code>var options = {    viewports: [        function(id) { return id === 2||id === 3; },function(id) { return id === 1; },    ] }; viewer.loadExtension('Autodesk.SplitScreen', options); //获取加载的Model viewer.impl.modelQueue().getModels()[2].id viewer.impl.modelQueue().getModels()[2].getData().urn //添加颜色 this.viewer.setThemingColor( 3964, new THREE.Vector4( 255 / 255, 0, 0, 1 ),viewer.impl.modelQueue().getModels()[0]);
+</code></pre>
+<p><strong>6.元素信息</strong> </p>
+<pre><code> it.enumNodeChildren(viewer.getSelection()[0], function(fragId) {   console.log(fragId) });  //获取元素碎片id： viewer.model.getData().instanceTree.enumNodeFragments(viewer.getSelection()[0], function(fragId) {     console.log(fragId); });  var fragProxy = viewer.impl.getFragmentProxy(viewer.model,fragId) fragProxy.frags fragProxy.frags.geoms.geomBoxes   
+</code></pre>
+<p><strong>7.视点保存</strong> </p>
+<pre><code> var cam = viewer.getState() viewer.restoreState(cam)
+</code></pre>
+<p><strong>8.剖面</strong> </p>
+<pre><code> Vector4 {x: 0, y: 0, z: -1, w: 1} :  负方向 剖的是负方向的元素(去除) w=1 距离00点 1 的位置 (1 往下的都看不到)  Vector4 {x: 0, y: 0, z: 1, w: 1} : 正方向  剖的正方向的元素(去除)  w=1 就是 距离00点 1的位置 即-1 的位置    -1 往上的都看不到 viewer.setCutPlanes( [ new THREE.Vector4( 0, 0, 1,1.575 )] );
+</code></pre>
+<p><strong>9.通过 externalId 查询dbId</strong> </p>
+<pre><code>  ar extId = 'd4f17bf0-ae11-48af-9184-8555e6c79f66-0002c195' viewer.model.getExternalIdMapping( function(map){ var dbid = map[extId]; console.log(dbid);   viewer.select(dbid);
+</code></pre>
+<p><strong>10.获取元素的父节点</strong> </p>
+<pre><code> viewer.model.getData().instanceTree.getNodeParentId(2876) //隐藏父节点 子节点也会隐藏  
+</code></pre>
+<p><strong>11.完全隐藏元素</strong> </p>
+<pre><code>viewer.impl.visibilityManager.setNodeOff(node, true);
+</code></pre>
+<p><strong>12.更新视图：</strong> </p>
+<pre><code>viewer.impl.invalidate(true, true, true)
+</code></pre>
+<p><strong>13.更改构件材质：</strong>  </p>
+<pre><code> //步骤一： 获取元素 fragId  viewer.model.getData().instanceTree.enumNodeFragments(viewer.getSelection()[0], function(fragId) {     console.log(fragId); }); //步骤二：创建材质 var material = new THREE.MeshBasicMaterial(        {color: 0xF5F5F5, transparent: true,opacity: 0.1 }); //步骤三：设置材质 NOP_VIEWER.model.getFragmentList().setMaterial(         fragId, material   );   //步骤一得到的  fragId //步骤四:刷新页面 NOP_VIEWER.impl.invalidate(true,true,true);                
+</code></pre>
+<p><strong>14.获取标高信息</strong> </p>
+<pre><code> function onDocumentLoadSuccess(viewerDocument) {    var defaultModel = viewerDocument.getRoot().getDefaultGeometry();    var aecData=Autodesk.Viewing.Document.getAecModelData(defaultModel);     viewer.aecData=aecData;    console.log(aecData)     viewer.loadDocumentNode(viewerDocument, defaultModel); }  
+</code></pre>
+<p><strong>15.去除forgeView中自带的扩展(全部去除)</strong> </p>
+<pre><code>viewer = new Autodesk.Viewing.GuiViewer3D(htmlDiv,config3d); 改成==&gt; viewer = new Autodesk.Viewing.Viewer3D(htmlDiv,config3d);
+</code></pre>
+<p>​    <img src="http://note.youdao.com/yws/public/resource/4dd8a96d80ef0f6d5e1dff7b72fc76ac/xmlnote/024BF3DD96AB4A3997EDE7024444892A/13747" alt="0"></p>
+<h1 id="自定义-Forge-Viewer-右键菜单（Context-Menu）"><a href="#自定义-Forge-Viewer-右键菜单（Context-Menu）" class="headerlink" title="自定义 Forge Viewer 右键菜单（Context Menu）"></a><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000011867872">自定义 Forge Viewer 右键菜单（Context Menu）</a></h1><p><a target="_blank" rel="noopener" href="https://segmentfault.com/t/autodesk-forge">autodesk-forge</a><a target="_blank" rel="noopener" href="https://segmentfault.com/t/viewer">viewer</a><a target="_blank" rel="noopener" href="https://segmentfault.com/t/javascript">javascript</a></p>
 <p>发布于 2017-11-05</p>
-<p><img src="https://sponsor.segmentfault.com/lg.php?bannerid=0&amp;campaignid=0&amp;zoneid=25&amp;loc=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000011867872&amp;referer=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000011867872&amp;cb=d1286b2689" alt="img"></p>
+<p><img src="https://sponsor.segmentfault.com/lg.php?bannerid=0&amp;campaignid=0&amp;zoneid=25&amp;loc=https://segmentfault.com/a/1190000011867872&amp;referer=https://segmentfault.com/a/1190000011867872&amp;cb=d1286b2689" alt="img"></p>
 <p>前阵子有些 Autodesk Forge 圈的朋友们都在询问同一个问题『要怎么在 Viewer 的自带右键菜单上添加自定义项目或是只显示自订义项目』～ 以下将针对『在自带右键菜单上添加自定义项目』和『只显示自订义项目的右键菜单』进行说明。</p>
 <p>一、 在自带右键菜单上添加自定义项目:</p>
 <p>在自带右键菜单上添加自定义项目是非常容易的，Forge Viewer 提供了一个 API 让使用者可以非常轻易的在自带菜单上添加自个的项目，而你需要做的就是像下面这段代码一样做一个简单的 API 调用。下面这个例子会在右键菜单上添加两个新项目，一个是『改变已选构件的颜色成红色（Override color of selected elements to red）』，另一个是『回复颜色变更（Clear overridden corlor）』：</p>
@@ -538,7 +570,9 @@ NOP_VIEWER.getProperties(sel[0],function(objProp){
             }
         });
     }
-});</code></pre><p>在执行完上面的代码后就在右键菜单上看到这两个项目：</p>
+});
+</code></pre>
+<p>在执行完上面的代码后就在右键菜单上看到这两个项目：</p>
 <ol>
 <li>『改变已选构件的颜色成红色（Override color of selected elements to red）』项目将会在有构件被选中时在菜单上显示：</li>
 </ol>
@@ -602,7 +636,9 @@ NOP_VIEWER.getProperties(sel[0],function(objProp){
   }
 }
 
-Autodesk.Viewing.theExtensionManager.registerExtension( 'DemoMenuExtension', MyMenuItemExtension );</code></pre><p>二、 只显示自订义项目的右键菜单:</p>
+Autodesk.Viewing.theExtensionManager.registerExtension( 'DemoMenuExtension', MyMenuItemExtension );
+</code></pre>
+<p>二、 只显示自订义项目的右键菜单:</p>
 <p>如果上头的代码与你的需求不符合，你可以考虑编写一自订义的右键菜单，一样的他也不会太困难。现在举个例子来说明，像现在如果我想让自带右键菜单上除了自带项目外，还会在点击到不同构件时显示不同的项目；我需要做的就是通过继承 <code>Autodesk.Viewing.Extensions.ViewerObjectContextMenu</code> 和加入 <code>hitTest</code> 相关的逻辑到自定义右键菜单的 <code>buildMenu</code> 函数，就像下面这样：</p>
 <pre><code>class MyContextMenu extends Autodesk.Viewing.Extensions.ViewerObjectContextMenu {
   constructor( viewer ) {
@@ -702,7 +738,9 @@ class MyContextMenuExtension extends Autodesk.Viewing.Extension {
     }
 }
 
-Autodesk.Viewing.theExtensionManager.registerExtension( 'DemoWallMenuExtension', MyContextMenuExtension );</code></pre><p>这样子就会在点击到墙构件显示这个项目『Show current surface temperature map』：<br><img src="https://segmentfault.com/img/bVXXw2" alt="图片描述"></p>
+Autodesk.Viewing.theExtensionManager.registerExtension( 'DemoWallMenuExtension', MyContextMenuExtension );
+</code></pre>
+<p>这样子就会在点击到墙构件显示这个项目『Show current surface temperature map』：<br><img src="https://segmentfault.com/img/bVXXw2" alt="图片描述"></p>
 <p>相反的，如果你不想显示菜单上自带的项目，你可以改成继承 <code>Autodesk.Viewing.UI.ObjectContextMenu</code>。但你点击到墙构件的时候就只会显示『Show current surface temperature map』这个项目，就像下面这个样子：</p>
 <pre><code>class MyContextMenu extends Autodesk.Viewing.Extensions.ObjectContextMenu {
   constructor( viewer ) {
@@ -728,7 +766,7 @@ Autodesk.Viewing.theExtensionManager.registerExtension( 'DemoWallMenuExtension',
   async buildMenu( event, status ) {
     // Get defulat menu items from the super class
     let menu = super.buildMenu( event, status );
-
+    
     if( !menu )
         menu = [];
 
@@ -805,26 +843,10 @@ class MyContextMenuExtension extends Autodesk.Viewing.Extension {
     }
 }
 
-Autodesk.Viewing.theExtensionManager.registerExtension( 'DemoWallMenuExtension', MyContextMenuExtension );</code></pre><p><img src="https://segmentfault.com/img/bVXXxl" alt="图片描述"></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+Autodesk.Viewing.theExtensionManager.registerExtension( 'DemoWallMenuExtension', MyContextMenuExtension );
+</code></pre>
+<p><img src="https://segmentfault.com/img/bVXXxl" alt="图片描述"></p>
+
             </div>
             <hr/>
 
@@ -1060,30 +1082,85 @@ Autodesk.Viewing.theExtensionManager.registerExtension( 'DemoWallMenuExtension',
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2018/09/14/qian-duan/vue/">
+                <a href="/2018/09/14/ruan-jian-she-ji/she-ji-mo-shi/java-mian-xiang-dui-xiang-she-ji-zhi-ce-lue-mo-shi/">
                     <div class="card-image">
                         
-                        <img src="http://static.blinkfox.com/hexoblog_20180914_js.jpg" class="responsive-img" alt="Vue">
+                        <img src="http://static.blinkfox.com/hexoblog_20140914_strategy.jpg" class="responsive-img" alt="Java面向对象设计之策略模式">
                         
-                        <span class="card-title">Vue</span>
+                        <span class="card-title">Java面向对象设计之策略模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Build Setup# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for produc
+                            一、模式动机完成一项任务，往往可以有多种不同的方式，每一种方式称为一个策略，我们可以根据环境或者条件的不同选择不同的策略来完成该项任务。在软件开发中也常常遇到类似的情况，实现某一个功能有多个途径，此时可以使用一种设计模式来使得系统可以灵活地
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="far fa-clock fa-fw icon-date"></i>2018-09-14
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="post-category">
+                                    软件设计
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">设计模式</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2018/09/14/qian-duan/javascript/">
+                    <div class="card-image">
+                        
+                        <img src="http://static.blinkfox.com/hexoblog_20180914_js.jpg" class="responsive-img" alt="javaScript">
+                        
+                        <span class="card-title">javaScript</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            初识javaScriptjs组成1.ecmaScript
+2.dom
+3.bom
+
+javascript语法js函数
+isNaN 判断是否是数字
+
+var x = 1000 / "Apple";
+isNaN(x); // 返回 true
+v
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1099,61 +1176,8 @@ npm run dev
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vue/">
-                        <span class="chip bg-color">Vue</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2018/09/13/hou-duan/java/commons/commons-collections-bao-he-jian-jie/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Apache Commons Collections包和简介">
-                        
-                        <span class="card-title">Apache Commons Collections包和简介</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            背景介绍Apache Commons是Apache软件基金会的项目，曾经隶属于Jakarta项目。Commons的目的是提供可重用的、解决各种实际的通用问题且开源的Java代码。Commons由三部分组成：Proper（是一些已发布的项目）
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-13
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/Apache/">
-                        <span class="chip bg-color">Apache</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>

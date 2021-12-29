@@ -29,7 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -482,14 +484,17 @@ nohup sh bin/mqnamesrv > mqnamesrv.log 2>&1 &
 2.查看启动日志
 tail -f ~/logs/rocketmqlogs/namesrv.log
 3.查看进程
-ps -ef|grep rocketmq 或 jps</code></pre>
+ps -ef|grep rocketmq 或 jps
+</code></pre>
 <h6 id="1-1-2-启动Broker"><a href="#1-1-2-启动Broker" class="headerlink" title="1.1.2 启动Broker"></a>1.1.2 启动Broker</h6><pre><code>1.启动Broker
 cd 进入RocketMQ安装目录
 nohup sh bin/mqbroker -n localhost:9876 &gt; mqbroker.log 2&gt;&amp;1 &amp;
 2.查看启动日志
 tail -f ~/logs/rocketmqlogs/broker.log
 3.查看进程
-ps -ef|grep rocketmq 或 jps</code></pre><ul>
+ps -ef|grep rocketmq 或 jps
+</code></pre>
+<ul>
 <li><p>问题描述</p>
 <p>RocketMQ默认的虚拟机内存较大,启动Broker如果因为内存不足失败,需要编辑如下两个配置文件,修改JVM内存大小</p>
 <pre class=" language-shell"><code class="language-shell"># 编辑runborker.sh和runserver.sh修改默认JVM大小
@@ -523,24 +528,29 @@ JAVA_OPT="${JAVA_OPT} -XX:-OmitStackTraceInFastThrow"
 JAVA_OPT="${JAVA_OPT}  -XX:-UseLargePages"
 JAVA_OPT="${JAVA_OPT} -Djava.ext.dirs=${BASE_DIR}/lib"
 #JAVA_OPT="${JAVA_OPT} -Xdebug -Xrunjdwp:transport=dt_socket,address=9555,server=y,suspend=n"
-JAVA_OPT="${JAVA_OPT} -cp ${CLASSPATH}"</code></pre>
+JAVA_OPT="${JAVA_OPT} -cp ${CLASSPATH}"
+</code></pre>
 </li>
 </ul>
 <h5 id="1-2-关闭RocketMQ"><a href="#1-2-关闭RocketMQ" class="headerlink" title="1.2  关闭RocketMQ"></a>1.2  关闭RocketMQ</h5><pre><code>1. 关闭NameServer
 sh bin/mqshutdown namesrv
 2. 关闭Broket
-sh bin/mqshutdown broker</code></pre><h5 id="1-3-测试RocketMQ"><a href="#1-3-测试RocketMQ" class="headerlink" title="1.3  测试RocketMQ"></a>1.3  测试RocketMQ</h5><ul>
+sh bin/mqshutdown broker
+</code></pre>
+<h5 id="1-3-测试RocketMQ"><a href="#1-3-测试RocketMQ" class="headerlink" title="1.3  测试RocketMQ"></a>1.3  测试RocketMQ</h5><ul>
 <li><p>发送消息</p>
 <pre class=" language-shell"><code class="language-shell">#1.设置环境变量
 export NAMESRV_ADDR=localhost:9876
 #2.使用安装包的dome发送消息
-sh bin/tools.sh org.apache.rocketmq.example.quickstart.Producer</code></pre>
+sh bin/tools.sh org.apache.rocketmq.example.quickstart.Producer
+</code></pre>
 </li>
 <li><p>接收消息</p>
 <pre class=" language-shell"><code class="language-shell">#1.设置环境变量
 export NAMESRV_ADDR=localhost:9876
 #2.使用安装包的dome发送消息
-sh bin/tools.sh org.apache.rocketmq.example.quickstart.Consumer</code></pre>
+sh bin/tools.sh org.apache.rocketmq.example.quickstart.Consumer
+</code></pre>
 </li>
 </ul>
 <h4 id="2-RocketMQ集群搭建"><a href="#2-RocketMQ集群搭建" class="headerlink" title="2.RocketMQ集群搭建"></a>2.RocketMQ集群搭建</h4><h5 id="2-1-各角色介绍"><a href="#2-1-各角色介绍" class="headerlink" title="2.1 各角色介绍"></a>2.1 各角色介绍</h5><ul>
@@ -557,25 +567,7 @@ sh bin/tools.sh org.apache.rocketmq.example.quickstart.Consumer</code></pre>
 <li>多Master多Slave模式(异步)</li>
 <li>多Master多Slave模式(同步)</li>
 </ul>
-<h6 id="2-2-2-集群的搭建"><a href="#2-2-2-集群的搭建" class="headerlink" title="2.2.2  集群的搭建"></a>2.2.2  集群的搭建</h6><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+<h6 id="2-2-2-集群的搭建"><a href="#2-2-2-集群的搭建" class="headerlink" title="2.2.2  集群的搭建"></a>2.2.2  集群的搭建</h6>
             </div>
             <hr/>
 

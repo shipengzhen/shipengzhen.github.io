@@ -29,7 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -491,30 +493,13 @@
 <span class="token function">npm</span> run e2e
 
 <span class="token comment" spellcheck="true"># run all tests</span>
-<span class="token function">npm</span> <span class="token function">test</span></code></pre>
-<p>For a detailed explanation on how things work, check out the <a href="http://vuejs-templates.github.io/webpack/" target="_blank" rel="noopener">guide</a> and <a href="http://vuejs.github.io/vue-loader" target="_blank" rel="noopener">docs for vue-loader</a>.</p>
-<p>项目初始化<br>    1.安装nodejs<br>        <a href="http://www.runoob.com/nodejs/nodejs-tutorial.html下载并安装" target="_blank" rel="noopener">http://www.runoob.com/nodejs/nodejs-tutorial.html下载并安装</a>,<br>        解压版需手动配置环境变量(bin)到根目录<br>    2.安装webpack和[yarn]<br>        npm install -g webpack<br>        npm install yarn -g<br>        查询yarn的安装目录 yarn global bin<br>    3.安装vue<br>        a. npm install -g vue<br>        b. yarn global add vue<br>    4.安装vue-cli<br>        a. npm install -g vue-cli<br>        b. yarn global add vue-cli<br>    5.生成vue项目<br>        vue init webpack 项目名<br>    6.cd 项目名<br>    7.运行项目<br>        npm run dev<br>项目目录结构<br>    index.html:项目根视图<br>    .postcssrc.js:postcss配置文件<br>    static:静态文件目录<br>模板语法<br>    this:指vue组件本身<br>    $event:DOM对象本身<br>    Vue组件(包含3个部分):<br>        template：视图<br>        script：逻辑<br>        style：样式<br>    Mustache:模板<br>        表现形式：，只能包含单行语法<br>    Vue基本指令：<br>        v-html=”属性”:渲染html<br>        v-text=”属性”:渲染文本<br>        v-bind: 绑定属性<br>    Vue条件渲染:<br>       &lt; h1 v-if=”true”&gt;我是if看见的<br>       &lt; h1 v-else-if=”true”&gt;我是else-if看见的<br>       &lt; h1 v-else&gt;我是else看见的<br>       &lt; h1 v-show=”true”&gt;和if用法一样(标签会加载,false时只是被隐藏了)<br>​    Vue列表渲染:<br>​        v-for<br>​    修饰符：<br>​        .stop 停止<br>​        .prevent<br>​        .capture<br>​        .self<br>​        .once 一次有效<br>​        用法：v-on:click.stop</p>
+<span class="token function">npm</span> <span class="token function">test</span>
+</code></pre>
+<p>For a detailed explanation on how things work, check out the <a target="_blank" rel="noopener" href="http://vuejs-templates.github.io/webpack/">guide</a> and <a target="_blank" rel="noopener" href="http://vuejs.github.io/vue-loader">docs for vue-loader</a>.</p>
+<p>项目初始化<br>    1.安装nodejs<br>        <a target="_blank" rel="noopener" href="http://www.runoob.com/nodejs/nodejs-tutorial.html%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%89%E8%A3%85">http://www.runoob.com/nodejs/nodejs-tutorial.html下载并安装</a>,<br>        解压版需手动配置环境变量(bin)到根目录<br>    2.安装webpack和[yarn]<br>        npm install -g webpack<br>        npm install yarn -g<br>        查询yarn的安装目录 yarn global bin<br>    3.安装vue<br>        a. npm install -g vue<br>        b. yarn global add vue<br>    4.安装vue-cli<br>        a. npm install -g vue-cli<br>        b. yarn global add vue-cli<br>    5.生成vue项目<br>        vue init webpack 项目名<br>    6.cd 项目名<br>    7.运行项目<br>        npm run dev<br>项目目录结构<br>    index.html:项目根视图<br>    .postcssrc.js:postcss配置文件<br>    static:静态文件目录<br>模板语法<br>    this:指vue组件本身<br>    $event:DOM对象本身<br>    Vue组件(包含3个部分):<br>        template：视图<br>        script：逻辑<br>        style：样式<br>    Mustache:模板<br>        表现形式：，只能包含单行语法<br>    Vue基本指令：<br>        v-html=”属性”:渲染html<br>        v-text=”属性”:渲染文本<br>        v-bind: 绑定属性<br>    Vue条件渲染:<br>       &lt; h1 v-if=”true”&gt;我是if看见的<br>       &lt; h1 v-else-if=”true”&gt;我是else-if看见的<br>       &lt; h1 v-else&gt;我是else看见的<br>       &lt; h1 v-show=”true”&gt;和if用法一样(标签会加载,false时只是被隐藏了)<br>​    Vue列表渲染:<br>​        v-for<br>​    修饰符：<br>​        .stop 停止<br>​        .prevent<br>​        .capture<br>​        .self<br>​        .once 一次有效<br>​        用法：v-on:click.stop</p>
 <h2 id="vue3"><a href="#vue3" class="headerlink" title="vue3"></a>vue3</h2><p>创建项目</p>
 <p>vue create mydemo</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -750,18 +735,18 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2018/09/14/qian-duan/webpack/">
+                <a href="/2018/09/14/qian-duan/javascript-ji-chu-jiao-cheng/">
                     <div class="card-image">
                         
-                        <img src="http://static.blinkfox.com/hexoblog_20180914_js.jpg" class="responsive-img" alt="WebPack">
+                        <img src="http://static.blinkfox.com/hexoblog_20180914_js.jpg" class="responsive-img" alt="JavaScript基础教程">
                         
-                        <span class="card-title">WebPack</span>
+                        <span class="card-title">JavaScript基础教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            初识WebPack本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中
+                            一、JavaScript介绍JavaScript是目前所有主流浏览器上唯一支持的脚本语言，这也是早期JavaScript的唯一用途。其主要作用是在不与服务器交互的情况下修改HTML页面内容，因此其最关键的部分是DOM（文档对象模型），也就是
                         
                     </div>
                     <div class="publish-info">
@@ -783,8 +768,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/WebPack/">
-                        <span class="chip bg-color">WebPack</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
@@ -798,20 +783,18 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/09/14/qian-duan/forge/">
+                <a href="/2018/09/14/qian-duan/webpack/">
                     <div class="card-image">
                         
-                        <img src="http://static.blinkfox.com/hexoblog_20180914_js.jpg" class="responsive-img" alt="Forge">
+                        <img src="http://static.blinkfox.com/hexoblog_20180914_js.jpg" class="responsive-img" alt="WebPack">
                         
-                        <span class="card-title">Forge</span>
+                        <span class="card-title">WebPack</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            forge Viewer 3(功能)1.3d\2d获取列表切换 
-//获取3d,2d列表 
-viewerDocument.getRoot().search({'type':'geometry','role':'2d'}); viewerDo
+                            初识WebPack本质上，webpack 是一个现代 JavaScript 应用程序的*静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)*，
                         
                     </div>
                     <div class="publish-info">
@@ -833,8 +816,8 @@ viewerDocument.getRoot().search({'type':'geometry','role':'2d'}); viewerDo
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Forge/">
-                        <span class="chip bg-color">Forge</span>
+                    <a href="/tags/WebPack/">
+                        <span class="chip bg-color">WebPack</span>
                     </a>
                     
                 </div>

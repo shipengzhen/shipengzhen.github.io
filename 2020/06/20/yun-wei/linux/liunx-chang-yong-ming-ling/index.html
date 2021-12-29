@@ -29,7 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -604,7 +606,8 @@ Permissive：表示关闭
 临时关闭selinux：setenforce 0
 永久关闭selinux（设置完成需要重启）：
 vim /etc/selinux/config
-修改为：SELINUX=disabled</code></pre>
+修改为：SELINUX=disabled
+</code></pre>
 <h2 id="用户操作命令"><a href="#用户操作命令" class="headerlink" title="用户操作命令"></a>用户操作命令</h2><pre><code>查看当前用户密码
     vim /etc/passwd
     vim /etc/shadow
@@ -653,7 +656,9 @@ vim /etc/selinux/config
     修改用户所属分组: groupadd -g组 GID 组名
     -g 指定工作组的id
     -r 创建系统工作组
-    -o 允许添加组ID不唯一的工作组</code></pre><h2 id="权限操作"><a href="#权限操作" class="headerlink" title="权限操作"></a>权限操作</h2><h3 id="权限介绍"><a href="#权限介绍" class="headerlink" title="权限介绍"></a>权限介绍</h3><pre><code>drwxrwxr-x. 3 spz spz 21 8月   9 22:16 Learning
+    -o 允许添加组ID不唯一的工作组
+</code></pre>
+<h2 id="权限操作"><a href="#权限操作" class="headerlink" title="权限操作"></a>权限操作</h2><h3 id="权限介绍"><a href="#权限介绍" class="headerlink" title="权限介绍"></a>权限介绍</h3><pre><code>drwxrwxr-x. 3 spz spz 21 8月   9 22:16 Learning
 ​    -rwxrw-rw-. 1 spz spz 3399 8月  25 12:05 Liunx命令.txt
 ​    d:代表是目录
 ​    -：代表文件
@@ -663,7 +668,9 @@ vim /etc/selinux/config
 ​    -c 显示指令执行过程，但只返回更改的部分
 ​    -f 不显示错误信息
 ​    -r 递归授权
-​    -v 显示指令执行过程</code></pre><h3 id="赋予权限"><a href="#赋予权限" class="headerlink" title="赋予权限"></a>赋予权限</h3><pre><code>chmod   ===》修改文件权限
+​    -v 显示指令执行过程
+</code></pre>
+<h3 id="赋予权限"><a href="#赋予权限" class="headerlink" title="赋予权限"></a>赋予权限</h3><pre><code>chmod   ===》修改文件权限
 ​    文件格式有两种格式：数字法、字母法
 ​    数字法：
 ​    r ===》读取权限，数字代号为 "4"
@@ -679,7 +686,9 @@ chmod 777 test.sh 赋予文件可执行权限
 755 全部权限
 chown -R mysql:mysql /usr/local/mysql
 chown -R mysql mysql/
-chgrp -R mysql mysql/</code></pre><h3 id="赋予-root-权限"><a href="#赋予-root-权限" class="headerlink" title="赋予 root 权限"></a>赋予 root 权限</h3><pre><code>方法一： 修改 /etc/sudoers 文件，找到下面一行，把前面的注释（#）去掉
+chgrp -R mysql mysql/
+</code></pre>
+<h3 id="赋予-root-权限"><a href="#赋予-root-权限" class="headerlink" title="赋予 root 权限"></a>赋予 root 权限</h3><pre><code>方法一： 修改 /etc/sudoers 文件，找到下面一行，把前面的注释（#）去掉
 ​        ## Allows people in group wheel to run all commands
 ​        %wheel    ALL=(ALL)    ALL
 ​        然后修改用户，使其属于root组（wheel），命令如下：
@@ -694,8 +703,12 @@ chgrp -R mysql mysql/</code></pre><h3 id="赋予-root-权限"><a href="#赋予-r
 ​        tommy:x:500:500:tommy:/home/tommy:/bin/bash
 ​        修改后如下 tommy:x:0:500:tommy:/home/tommy:/bin/bash
 ​        保存，用tommy账户登录后，直接获取的就是root帐号的权限。
-友情提醒：虽然方法三看上去简单方便，但一般不推荐使用，推荐使用方法二。</code></pre><h2 id="进程操作"><a href="#进程操作" class="headerlink" title="进程操作"></a>进程操作</h2><pre><code>1.ps(查看进程命令) ps -ef|grep[进程关键词]
-2.kill(杀掉进程) kill -9[PID]</code></pre><h2 id="服务操作"><a href="#服务操作" class="headerlink" title="服务操作"></a>服务操作</h2><pre><code>开启服务
+友情提醒：虽然方法三看上去简单方便，但一般不推荐使用，推荐使用方法二。
+</code></pre>
+<h2 id="进程操作"><a href="#进程操作" class="headerlink" title="进程操作"></a>进程操作</h2><pre><code>1.ps(查看进程命令) ps -ef|grep[进程关键词]
+2.kill(杀掉进程) kill -9[PID]
+</code></pre>
+<h2 id="服务操作"><a href="#服务操作" class="headerlink" title="服务操作"></a>服务操作</h2><pre><code>开启服务
     service 服务名 start
     启动SSH服务 service sshd start
 重启服务
@@ -703,7 +716,9 @@ chgrp -R mysql mysql/</code></pre><h3 id="赋予-root-权限"><a href="#赋予-r
     启动SSH服务 service sshd restart
 关闭服务
     service 服务名 stop
-    关闭SSH服务 service sshd stop</code></pre><h2 id="常用的软件安装方式"><a href="#常用的软件安装方式" class="headerlink" title="常用的软件安装方式"></a>常用的软件安装方式</h2><h3 id="1-源码安装"><a href="#1-源码安装" class="headerlink" title="1.源码安装"></a>1.源码安装</h3><pre><code>(1)tar(解压)安装 tar[选项][压缩包]
+    关闭SSH服务 service sshd stop
+</code></pre>
+<h2 id="常用的软件安装方式"><a href="#常用的软件安装方式" class="headerlink" title="常用的软件安装方式"></a>常用的软件安装方式</h2><h3 id="1-源码安装"><a href="#1-源码安装" class="headerlink" title="1.源码安装"></a>1.源码安装</h3><pre><code>(1)tar(解压)安装 tar[选项][压缩包]
             -c 指定特定目录压缩
             -x 从备份文件中还原文件
             -t 列出备份文件内容
@@ -718,9 +733,11 @@ chgrp -R mysql mysql/</code></pre><h3 id="赋予-root-权限"><a href="#赋予-r
             解压bz包: tar -jxvf [包名]
             解压普通包: tar -xvf [包名]
 (2)进入源码目录
-    ./configure  --prefix=安装位置  --with 安装参数 --sysconfdir=配置文件目录
+    ./configure&nbsp;&nbsp;--prefix=安装位置  --with 安装参数 --sysconfdir=配置文件目录
     make
-    make install</code></pre><h3 id="2-rpm-软件包-安装-rpm-选项-软件包"><a href="#2-rpm-软件包-安装-rpm-选项-软件包" class="headerlink" title="2.rpm(软件包)安装 rpm[选项][软件包]"></a>2.rpm(软件包)安装 rpm[选项][软件包]</h3><pre><code>-ivh 安装显示安装进度
+    make install
+</code></pre>
+<h3 id="2-rpm-软件包-安装-rpm-选项-软件包"><a href="#2-rpm-软件包-安装-rpm-选项-软件包" class="headerlink" title="2.rpm(软件包)安装 rpm[选项][软件包]"></a>2.rpm(软件包)安装 rpm[选项][软件包]</h3><pre><code>-ivh 安装显示安装进度
 -Uvh 升级软件包
 -qpl 列出rpm软件包内的文件信息
 -qpi 列出rpm软件包的描述信息
@@ -733,37 +750,57 @@ chgrp -R mysql mysql/</code></pre><h3 id="赋予-root-权限"><a href="#赋予-r
 查询软件安装位置: rpm -ql 软件关键字
 卸载已经安装的软件包： rpm -e 软件包全名
 安装软件包并查看进度: rpm -ivh 软件包路径
-批量卸载: rpm -qa | grep 服务名 | xargs rpm -evh --nodeps</code></pre><h3 id="3-yum-在线-安装"><a href="#3-yum-在线-安装" class="headerlink" title="3.yum(在线)安装"></a>3.yum(在线)安装</h3><pre><code>yum list //列出所指定的软件包,后可以加上你想查找的软件包的名字
+批量卸载: rpm -qa | grep 服务名 | xargs rpm -evh --nodeps
+</code></pre>
+<h3 id="3-yum-在线-安装"><a href="#3-yum-在线-安装" class="headerlink" title="3.yum(在线)安装"></a>3.yum(在线)安装</h3><pre><code>yum list //列出所指定的软件包,后可以加上你想查找的软件包的名字
 yum list installed //列出所有已安装的软件包
 yum list installed | grep 软件包名
 yum info installed //列出所有已安裝的软件包信息
 yum install 软件包名 安装
-yum remove 软件包名 卸载</code></pre><h4 id="修改-yum-的下载源"><a href="#修改-yum-的下载源" class="headerlink" title="修改 yum 的下载源"></a>修改 yum 的下载源</h4><pre><code>1. 备份本地yum源
+yum remove 软件包名 卸载
+</code></pre>
+<h4 id="修改-yum-的下载源"><a href="#修改-yum-的下载源" class="headerlink" title="修改 yum 的下载源"></a>修改 yum 的下载源</h4><pre><code>1. 备份本地yum源
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo_bak
 2.获取阿里yum源配置文件
 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 3.服务器的包信息下载到本地电脑缓存
 yum makecache
 4.更新cache
-yum -y update</code></pre><h2 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h2><pre><code>curl -L https://portainer.io/download/portainer-agent-stack.yml -o /usr/local/docker/portainer/portainer-agent-stack.yml
-wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</code></pre><h2 id="各种包操作命令"><a href="#各种包操作命令" class="headerlink" title="各种包操作命令"></a>各种包操作命令</h2><h3 id="tar-命令"><a href="#tar-命令" class="headerlink" title="tar 命令　　"></a>tar 命令　　</h3><pre><code>解包：tar zxvf FileName.tar
-打包：tar czvf FileName.tar DirName</code></pre><h3 id="gz-命令"><a href="#gz-命令" class="headerlink" title="gz 命令　"></a>gz 命令　</h3><pre><code>解压1：gunzip FileName.gz
+yum -y update
+</code></pre>
+<h2 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h2><pre><code>curl -L https://portainer.io/download/portainer-agent-stack.yml -o /usr/local/docker/portainer/portainer-agent-stack.yml
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+</code></pre>
+<h2 id="各种包操作命令"><a href="#各种包操作命令" class="headerlink" title="各种包操作命令"></a>各种包操作命令</h2><h3 id="tar-命令"><a href="#tar-命令" class="headerlink" title="tar 命令"></a>tar 命令</h3><pre><code>解包：tar zxvf FileName.tar
+打包：tar czvf FileName.tar DirName
+</code></pre>
+<h3 id="gz-命令"><a href="#gz-命令" class="headerlink" title="gz 命令"></a>gz 命令</h3><pre><code>解压1：gunzip FileName.gz
 解压2：gzip -d FileName.gz
 压缩：gzip FileName.tar.gz 和 .tgz
 解压：tar zxvf FileName.tar.gz
 压缩：tar zcvf FileName.tar.gz DirName
-压缩多个文件：tar zcvf FileName.tar.gz DirName1 DirName2 DirName3 ...</code></pre><h3 id="bz2-命令"><a href="#bz2-命令" class="headerlink" title="bz2 命令"></a>bz2 命令</h3><pre><code>解压1：bzip2 -d FileName.bz2
+压缩多个文件：tar zcvf FileName.tar.gz DirName1 DirName2 DirName3 ...
+</code></pre>
+<h3 id="bz2-命令"><a href="#bz2-命令" class="headerlink" title="bz2 命令"></a>bz2 命令</h3><pre><code>解压1：bzip2 -d FileName.bz2
 解压2：bunzip2 FileName.bz2
 压缩： bzip2 -z FileName.tar.bz2
 解压：tar jxvf FileName.tar.bz2
-压缩：tar jcvf FileName.tar.bz2 DirName</code></pre><h3 id="bz-命令"><a href="#bz-命令" class="headerlink" title="bz 命令"></a>bz 命令</h3><pre><code>解压1：bzip2 -d FileName.bz
+压缩：tar jcvf FileName.tar.bz2 DirName
+</code></pre>
+<h3 id="bz-命令"><a href="#bz-命令" class="headerlink" title="bz 命令"></a>bz 命令</h3><pre><code>解压1：bzip2 -d FileName.bz
 解压2：bunzip2 FileName.bz
 压缩：未知.tar.bz
-解压：tar jxvf FileName.tar.bz</code></pre><h3 id="Z-命令"><a href="#Z-命令" class="headerlink" title="Z 命令"></a>Z 命令</h3><pre><code>解压：uncompress FileName.Z
+解压：tar jxvf FileName.tar.bz
+</code></pre>
+<h3 id="Z-命令"><a href="#Z-命令" class="headerlink" title="Z 命令"></a>Z 命令</h3><pre><code>解压：uncompress FileName.Z
 压缩：compress FileName.tar.Z
 解压：tar Zxvf FileName.tar.Z
-压缩：tar Zcvf FileName.tar.Z DirName</code></pre><h3 id="zip-命令"><a href="#zip-命令" class="headerlink" title="zip 命令　　"></a>zip 命令　　</h3><pre><code>解压：unzip FileName.zip
-压缩：zip FileName.zip DirName</code></pre><h2 id="搜索命令"><a href="#搜索命令" class="headerlink" title="搜索命令"></a>搜索命令</h2><h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><pre><code>find 根据下列规则判断 path 和 expression，在命令列上第一个 - ( ) , ! 之前的部份为 path，之后的是 expression。如果 path 是空字串则使用目前路径，如果 expression 是空字串则使用 -print 为预设 expression。
+压缩：tar Zcvf FileName.tar.Z DirName
+</code></pre>
+<h3 id="zip-命令"><a href="#zip-命令" class="headerlink" title="zip 命令"></a>zip 命令</h3><pre><code>解压：unzip FileName.zip
+压缩：zip FileName.zip DirName
+</code></pre>
+<h2 id="搜索命令"><a href="#搜索命令" class="headerlink" title="搜索命令"></a>搜索命令</h2><h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><pre><code>find 根据下列规则判断 path 和 expression，在命令列上第一个 - ( ) , ! 之前的部份为 path，之后的是 expression。如果 path 是空字串则使用目前路径，如果 expression 是空字串则使用 -print 为预设 expression。
     expression 中可使用的选项有二三十个之多，在此只介绍最常用的部份。
         -mount, -xdev : 只检查和指定目录在同一个文件系统下的文件，避免列出其它文件系统中的文件
         -amin n : 在过去 n 分钟内被读取过
@@ -790,18 +827,26 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
         -not expr
         exp1 -or exp2
         exp1, exp2
-示例    find / -name  '文件名'</code></pre><h2 id="centos6"><a href="#centos6" class="headerlink" title="centos6"></a>centos6</h2><pre><code>关闭防火墙
+示例    find / -name  '文件名'
+</code></pre>
+<h2 id="centos6"><a href="#centos6" class="headerlink" title="centos6"></a>centos6</h2><pre><code>关闭防火墙
 service iptables stop
 永久关闭防火墙
 chkconfig iptables off
 检测防火墙状态
-service iptables status</code></pre><h3 id="开放端口的方法："><a href="#开放端口的方法：" class="headerlink" title="开放端口的方法："></a>开放端口的方法：</h3><h4 id="方法一：命令行方式"><a href="#方法一：命令行方式" class="headerlink" title="方法一：命令行方式"></a>方法一：命令行方式</h4><pre><code>1.开放端口命令： /sbin/iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+service iptables status
+</code></pre>
+<h3 id="开放端口的方法："><a href="#开放端口的方法：" class="headerlink" title="开放端口的方法："></a>开放端口的方法：</h3><h4 id="方法一：命令行方式"><a href="#方法一：命令行方式" class="headerlink" title="方法一：命令行方式"></a>方法一：命令行方式</h4><pre><code>1.开放端口命令： /sbin/iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
 c.d/init.d/iptables save
 2.重启服务：/etc/init.d/iptables restart
-3.查看端口是否开放：/sbin/iptables -L -n</code></pre><h4 id="方法二：直接编辑-etc-sysconfig-iptables-文件"><a href="#方法二：直接编辑-etc-sysconfig-iptables-文件" class="headerlink" title="方法二：直接编辑/etc/sysconfig/iptables 文件"></a>方法二：直接编辑/etc/sysconfig/iptables 文件</h4><pre><code> 1.编辑/etc/sysconfig/iptables文件：vi /etc/sysconfig/iptables
+3.查看端口是否开放：/sbin/iptables -L -n
+</code></pre>
+<h4 id="方法二：直接编辑-etc-sysconfig-iptables-文件"><a href="#方法二：直接编辑-etc-sysconfig-iptables-文件" class="headerlink" title="方法二：直接编辑/etc/sysconfig/iptables 文件"></a>方法二：直接编辑/etc/sysconfig/iptables 文件</h4><pre><code> 1.编辑/etc/sysconfig/iptables文件：vi /etc/sysconfig/iptables
    加入内容并保存：-A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
   2.重启服务：/etc/init.d/iptables restart
-  3.查看端口是否开放：/sbin/iptables -L -n</code></pre><hr>
+  3.查看端口是否开放：/sbin/iptables -L -n
+</code></pre>
+<hr>
 <h2 id="centos7"><a href="#centos7" class="headerlink" title="centos7"></a>centos7</h2><pre><code>systemctl list-unit-files|grep enabled 查询所有自启软件
 
 systemctl start firewalld.service 开启防火墙
@@ -843,7 +888,9 @@ vim /etc/firewalld/zones/public.xml
 netstat -ntpl  查询所有正在使用端口
 
 free -h 查看内存使用率
-htop 查看cup使用率</code></pre><hr>
+htop 查看cup使用率
+</code></pre>
+<hr>
 <h2 id="建立软连接，变为全局"><a href="#建立软连接，变为全局" class="headerlink" title="建立软连接，变为全局"></a>建立软连接，变为全局</h2><pre><code>ln
     -b 删除，覆盖以前建立的链接
     -d 允许超级用户制作目录的硬链接
@@ -852,7 +899,9 @@ htop 查看cup使用率</code></pre><hr>
     -n 把符号链接视为一般目录
     -s 软链接(符号链接)
     -v 显示详细的处理过程
-示例    ln -s /usr/local/java/jdk1.8.0_144/bin/* /usr/local/bin/</code></pre><hr>
+示例    ln -s /usr/local/java/jdk1.8.0_144/bin/* /usr/local/bin/
+</code></pre>
+<hr>
 <h2 id="如何查找-SHELL-的进程号并杀死"><a href="#如何查找-SHELL-的进程号并杀死" class="headerlink" title="如何查找 SHELL 的进程号并杀死"></a>如何查找 SHELL 的进程号并杀死</h2><h3 id="一、shell-查找进程并杀死"><a href="#一、shell-查找进程并杀死" class="headerlink" title="一、shell 查找进程并杀死"></a>一、shell 查找进程并杀死</h3><pre><code>复制代码
 #!/bin/sh
 tomcat_id=`ps -ef | grep tomcat | grep -v "grep" | awk '{print $2}'`
@@ -864,10 +913,14 @@ do
     echo "killed $id"
 done
 复制代码
-注意：tomcat表示要查找的程序进程名，如：tomcat、8081端口、redis等等</code></pre><h3 id="二、linux-查找进程并杀死"><a href="#二、linux-查找进程并杀死" class="headerlink" title="二、linux 查找进程并杀死"></a>二、linux 查找进程并杀死</h3><pre><code>#####查找tomcat进程
+注意：tomcat表示要查找的程序进程名，如：tomcat、8081端口、redis等等
+</code></pre>
+<h3 id="二、linux-查找进程并杀死"><a href="#二、linux-查找进程并杀死" class="headerlink" title="二、linux 查找进程并杀死"></a>二、linux 查找进程并杀死</h3><pre><code>#####查找tomcat进程
 ps -ef | grep tomcat | grep -v grep | awk '{print $2}'
 #####查找tomcat进程并杀死
-ps -ef | grep tomcat | grep -v grep | awk '{print $2}' | xargs kill -9</code></pre><h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><pre><code>一、Linux下删除文件和文件夹常用命令如下：
+ps -ef | grep tomcat | grep -v grep | awk '{print $2}' | xargs kill -9
+</code></pre>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><pre><code>一、Linux下删除文件和文件夹常用命令如下：
 删除文件： rm file  www.2cto.com
 删除文件夹： rm -rf dir
 需要注意的是， rmdir 只能够删除 空文件夹。
@@ -897,39 +950,31 @@ find ./ -name '[^k][^e][^e][^p]*'  -exec rm -rf {} \;
 
  #删除keep以外的其他文件。推荐！
 find ./ -name '[^k][^e][^e][^p]*'  | xargs rm -rf
-说明：上面第二行的代码效率高些，原因在于删除多个文件时 -exec会启动多个进程来处理，而xargs会启动一个rm进程来处理。</code></pre><hr>
+说明：上面第二行的代码效率高些，原因在于删除多个文件时 -exec会启动多个进程来处理，而xargs会启动一个rm进程来处理。
+</code></pre>
+<hr>
 <h2 id="systemctl"><a href="#systemctl" class="headerlink" title="systemctl"></a>systemctl</h2><pre><code>systemctl list-unit-files 查询启动项
 systemctl list-unit-files | grep enabled 启用的
 systemctl list-unit-files | grep disabled 紧用的
-./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_dav_module</code></pre><h4 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h4><pre><code>Xshell上传文件 ==&gt; yum install lrzsz -y</code></pre><h4 id="端口测试"><a href="#端口测试" class="headerlink" title="端口测试"></a>端口测试</h4><ul>
+./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_dav_module
+</code></pre>
+<h4 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h4><pre><code>Xshell上传文件 ==&gt; yum install lrzsz -y
+</code></pre>
+<h4 id="端口测试"><a href="#端口测试" class="headerlink" title="端口测试"></a>端口测试</h4><ul>
 <li>tpc</li>
 </ul>
 <pre><code>telnet 127.0.0.1 23
 nmap 127.0.0.1 -p23
-nc -vzw 2 127.0.0.1 23</code></pre><ul>
+nc -vzw 2 127.0.0.1 23
+</code></pre>
+<ul>
 <li>udp</li>
 </ul>
 <pre><code>nc -ul -p 23
 nc -ul 23
-nc -ul 127.0.0.1 23</code></pre><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+nc -ul 127.0.0.1 23
+</code></pre>
+
             </div>
             <hr/>
 

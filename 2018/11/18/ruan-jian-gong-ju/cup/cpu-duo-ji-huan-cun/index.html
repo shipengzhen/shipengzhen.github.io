@@ -29,7 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -663,37 +665,19 @@
 <p>所以，CPU 为什么会有乱序执行优化？本质原因是<strong>CPU为了效率</strong>，将长费时的操作“异步”执行，排在后面的指令不等前面的指令执行完毕就开始执行后面的指令。而且允许排在前面的长费时指令后于排在后面的指令执行完。</p>
 <p>CPU 执行乱序主要有以下几种：</p>
 <ul>
-<li><strong>写写乱序(store store)</strong>：<code>a=1;b=2; -&gt; b=2;a=1;</code></li>
-<li><strong>写读乱序(store load)</strong>：<code>a=1;load(b); -&gt; load(b);a=1;</code></li>
-<li><strong>读读乱序(load load)</strong>：<code>load(a);load(b); -&gt; load(b);load(a);</code></li>
-<li><strong>读写乱序(load store)</strong>：<code>load(a);b=2; -&gt; b=2;load(a);</code></li>
+<li>**写写乱序(store store)**：<code>a=1;b=2; -&gt; b=2;a=1;</code></li>
+<li>**写读乱序(store load)**：<code>a=1;load(b); -&gt; load(b);a=1;</code></li>
+<li>**读读乱序(load load)**：<code>load(a);load(b); -&gt; load(b);load(a);</code></li>
+<li>**读写乱序(load store)**：<code>load(a);b=2; -&gt; b=2;load(a);</code></li>
 </ul>
 <p>总而言之，<strong>CPU的乱序执行优化指的是处理器为提高运算速度而做出违背代码原有顺序的优化</strong>。</p>
 <hr>
 <p>参考文章：</p>
 <ul>
-<li><a href="http://ifeve.com/from-javaeye-cpu-cache/" target="_blank" rel="noopener">从Java视角理解系统结构（二）CPU缓存</a></li>
-<li><a href="http://www.cnblogs.com/yanlong300/p/8986041.html" target="_blank" rel="noopener">CPU缓存一致性协议MESI</a></li>
+<li><a target="_blank" rel="noopener" href="http://ifeve.com/from-javaeye-cpu-cache/">从Java视角理解系统结构（二）CPU缓存</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/yanlong300/p/8986041.html">CPU缓存一致性协议MESI</a></li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 

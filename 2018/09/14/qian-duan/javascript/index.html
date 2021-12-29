@@ -29,7 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -474,18 +476,23 @@
             <div id="articleContent">
                 <h2 id="初识javaScript"><a href="#初识javaScript" class="headerlink" title="初识javaScript"></a>初识javaScript</h2><h3 id="js组成"><a href="#js组成" class="headerlink" title="js组成"></a>js组成</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token punctuation">.</span>ecmaScript
 <span class="token number">2</span><span class="token punctuation">.</span>dom
-<span class="token number">3</span><span class="token punctuation">.</span>bom</code></pre>
+<span class="token number">3</span><span class="token punctuation">.</span>bom
+</code></pre>
 <h2 id="javascript语法"><a href="#javascript语法" class="headerlink" title="javascript语法"></a>javascript语法</h2><h3 id="js函数"><a href="#js函数" class="headerlink" title="js函数"></a>js函数</h3><ul>
 <li>isNaN 判断是否是数字</li>
 </ul>
 <pre><code>var x = 1000 / "Apple";
 isNaN(x); // 返回 true
 var y = 100 / "1000";
-isNaN(y); // 返回 false</code></pre><ul>
+isNaN(y); // 返回 false
+</code></pre>
+<ul>
 <li>typeof  返回数据类型</li>
 </ul>
 <pre><code>var x = 1;
-console.log(typeof x); 返回number</code></pre><ul>
+console.log(typeof x); 返回number
+</code></pre>
+<ul>
 <li>arguments 获取所有实参</li>
 </ul>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">getAgs</span><span class="token punctuation">(</span>arg1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -495,7 +502,8 @@ console.log(typeof x); 返回number</code></pre><ul>
         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span class="token function">getAgs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<span class="token function">getAgs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <h3 id="js对象"><a href="#js对象" class="headerlink" title="js对象"></a>js对象</h3><h5 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h5><ul>
 <li><p>自面量创建对象</p>
 <pre><code>var obj={};
@@ -503,33 +511,39 @@ var obj = {uname : '张三',age : 23,
     sayHi : function(){
         console.log('holle !!!');
     }
-};</code></pre></li>
+};
+</code></pre>
+</li>
 <li><p>new 创建对象</p>
 </li>
 </ul>
 <h5 id="使用对象"><a href="#使用对象" class="headerlink" title="使用对象"></a>使用对象</h5><pre><code>console.log(obj.age);
-console.log(obj['age']);</code></pre><h3 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h3><ul>
-<li>1.转化为字符串</li>
+console.log(obj['age']);
+</code></pre>
+<h3 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h3><ul>
+<li> 1.转化为字符串</li>
 </ul>
 <pre><code>var number = 10;
 var str = number.toString();
 str = String(number);
-str = "" + number;</code></pre><ul>
+str = "" + number;
+</code></pre>
+<ul>
 <li>2.转化为number</li>
 </ul>
 <pre><code>var strAge = 23;
 var age = parseInt(strAge);//取整,去末尾字符串
 age = parseFloat(steAge);//去末尾字符串
 age = Number(strAge);
-age = strAge - 0;</code></pre><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><h4 id="短路运算"><a href="#短路运算" class="headerlink" title="短路运算"></a>短路运算</h4><h5 id="1-逻辑与"><a href="#1-逻辑与" class="headerlink" title="1.逻辑与"></a>1.逻辑与</h5><ul>
+age = strAge - 0;
+</code></pre>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><h4 id="短路运算"><a href="#短路运算" class="headerlink" title="短路运算"></a>短路运算</h4><h5 id="1-逻辑与"><a href="#1-逻辑与" class="headerlink" title="1.逻辑与"></a>1.逻辑与</h5><ul>
 <li><p>语法: 表达式1 &amp;&amp; 表达式2</p>
 </li>
 <li><p>表达式1为真,返回表达式2</p>
 </li>
-<li><p>表达式1为假,返回表达式1</p>
-<pre><code>console.log(1 &amp;&amp; 2); 方法2
-console.log(0 &amp;&amp; 2); 返回0
-</code></pre></li>
+<li><p>表达式1为假,返回表达式1<br>```<br>console.log(1 &amp;&amp; 2); 方法2<br>console.log(0 &amp;&amp; 2); 返回0</p>
+</li>
 </ul>
 <p>注意: 0 ‘’ null undefined NaN 是假的,其余都是真的</p>
 <pre><code>##### 2.逻辑或
@@ -537,11 +551,13 @@ console.log(0 &amp;&amp; 2); 返回0
 * 语法: 表达式1 || 表达式2
 * 表达式1为真,返回表达式1
 * 表达式1为假,返回表达式2
-</code></pre><p>console.log(1 || 2); 方法1<br>console.log(0 || 2); 返回2</p>
+</code></pre>
+<p>console.log(1 || 2); 方法1<br>console.log(0 || 2); 返回2</p>
 <p>注意: 0 ‘’ null undefined NaN 是假的,其余都是真的</p>
 <pre><code>
 #### 赋值运算符
-</code></pre><p>var num = 1;<br>num ++ ;  //2<br>num += 1; //2<br>num *= 1; //1<br>num -= 1; //0</p>
+</code></pre>
+<p>var num = 1;<br>num ++ ;  //2<br>num += 1; //2<br>num *= 1; //1<br>num -= 1; //0</p>
 <pre><code>
 #### 运算符优先级
 
@@ -638,38 +654,23 @@ console.log(0 &amp;&amp; 2); 返回0
 * document.body/documentElement.scrollLeft/scrollTop  -&gt;兼容性比较混乱,用时取两个值相加,因为不可能存在两个同时有值
 
 * 封装兼容性方法,求滚动轮滚动距离getScrollOffSet()
-</code></pre><p>  function getScollOffset() {<br>      if (window.pageXOffset) {<br>          return {<br>              x: window.pageXOffset,<br>              y: window.pageYOffset<br>          }<br>      } else {<br>          return {<br>              x: document.body.scrollLeft + document.documentElement.scrollLeft,<br>              y: document.body.scrollTop + document.documentElement.scrollTop<br>          }<br>      }<br>  }</p>
+</code></pre>
+<p>  function getScollOffset() {<br>      if (window.pageXOffset) {<br>          return {<br>              x: window.pageXOffset,<br>              y: window.pageYOffset<br>          }<br>      } else {<br>          return {<br>              x: document.body.scrollLeft + document.documentElement.scrollLeft,<br>              y: document.body.scrollTop + document.documentElement.scrollTop<br>          }<br>      }<br>  }</p>
 <pre><code>
 #### 查看视口尺寸
 * window.innerWidth/window.innerHeight  -&gt;可视窗口的宽/高     IE8一下不支持
 * document.documentElement.clientWidth/clientHeight  -&gt; 标准模式下任何浏览器都兼容
 * document.body.clientWidth/clientHeight   --&gt;适用于怪异模式下的浏览器
 * 封装兼容性方法,方法浏览器视口尺寸getViewportOffset()
-</code></pre><p>function getViewportOffset() {<br>    if (window.innerWidth) {<br>        return {<br>            w: window.innerWidth,<br>            h: window.innerHeight<br>        }<br>    } else {<br>        if (document.compatMode === ‘BackCompat’) {<br>            return {<br>                w: document.body.clientWidth,<br>                h: document.body.clientHeight,<br>            }<br>        } else {<br>            return {<br>                w: document.documentElement.clientWidth,<br>                h: document.documentElement.clientHeight<br>            }<br>        }<br>    }<br>}</p>
+</code></pre>
+<p>function getViewportOffset() {<br>    if (window.innerWidth) {<br>        return {<br>            w: window.innerWidth,<br>            h: window.innerHeight<br>        }<br>    } else {<br>        if (document.compatMode === ‘BackCompat’) {<br>            return {<br>                w: document.body.clientWidth,<br>                h: document.body.clientHeight,<br>            }<br>        } else {<br>            return {<br>                w: document.documentElement.clientWidth,<br>                h: document.documentElement.clientHeight<br>            }<br>        }<br>    }<br>}</p>
 <pre><code>
 * getBoundingClientRect()   -&gt; 获取DOM对象属性
-</code></pre><p>$(“body”)[0].getBoundingClientRect() 返回–&gt; DOMRect </p>
+</code></pre>
+<p>$(“body”)[0].getBoundingClientRect() 返回–&gt; DOMRect&nbsp;</p>
 <p>```</p>
 <hr>
-<h1 id="EcmaScript6"><a href="#EcmaScript6" class="headerlink" title="EcmaScript6"></a>EcmaScript6</h1><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+<h1 id="EcmaScript6"><a href="#EcmaScript6" class="headerlink" title="EcmaScript6"></a>EcmaScript6</h1>
             </div>
             <hr/>
 
@@ -905,18 +906,20 @@ console.log(0 &amp;&amp; 2); 返回0
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2018/09/14/ruan-jian-she-ji/she-ji-mo-shi/java-mian-xiang-dui-xiang-she-ji-zhi-ce-lue-mo-shi/">
+                <a href="/2018/09/14/qian-duan/forge/">
                     <div class="card-image">
                         
-                        <img src="http://static.blinkfox.com/hexoblog_20140914_strategy.jpg" class="responsive-img" alt="Java面向对象设计之策略模式">
+                        <img src="http://static.blinkfox.com/hexoblog_20180914_js.jpg" class="responsive-img" alt="Forge">
                         
-                        <span class="card-title">Java面向对象设计之策略模式</span>
+                        <span class="card-title">Forge</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、模式动机完成一项任务，往往可以有多种不同的方式，每一种方式称为一个策略，我们可以根据环境或者条件的不同选择不同的策略来完成该项任务。在软件开发中也常常遇到类似的情况，实现某一个功能有多个途径，此时可以使用一种设计模式来使得系统可以灵活地
+                            forge Viewer 3(功能)1.3d\2d获取列表切换 
+//获取3d,2d列表 
+viewerDocument.getRoot().search({'type':'geometry','role':'2d'}); viewerDo
                         
                     </div>
                     <div class="publish-info">
@@ -927,8 +930,8 @@ console.log(0 &amp;&amp; 2); 返回0
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                    软件设计
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -938,12 +941,8 @@ console.log(0 &amp;&amp; 2); 返回0
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">设计模式</span>
+                    <a href="/tags/Forge/">
+                        <span class="chip bg-color">Forge</span>
                     </a>
                     
                 </div>
@@ -957,18 +956,23 @@ console.log(0 &amp;&amp; 2); 返回0
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/09/14/qian-duan/javascript-ji-chu-jiao-cheng/">
+                <a href="/2018/09/14/qian-duan/typescript/">
                     <div class="card-image">
                         
-                        <img src="http://static.blinkfox.com/hexoblog_20180914_js.jpg" class="responsive-img" alt="JavaScript基础教程">
+                        <img src="http://static.blinkfox.com/hexoblog_20180914_js.jpg" class="responsive-img" alt="TypeScript">
                         
-                        <span class="card-title">JavaScript基础教程</span>
+                        <span class="card-title">TypeScript</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、JavaScript介绍JavaScript是目前所有主流浏览器上唯一支持的脚本语言，这也是早期JavaScript的唯一用途。其主要作用是在不与服务器交互的情况下修改HTML页面内容，因此其最关键的部分是DOM（文档对象模型），也就是
+                            初识TypeScriptTypeScript 是一种给 JavaScript 添加特性的语言扩展。
+语言特性TypeScript 是一种给 JavaScript 添加特性的语言扩展。增加的功能包括：
+
+类型批注和编译时类型检查
+类型推断
+类
                         
                     </div>
                     <div class="publish-info">
@@ -990,8 +994,8 @@ console.log(0 &amp;&amp; 2); 返回0
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/TypeScript/">
+                        <span class="chip bg-color">TypeScript</span>
                     </a>
                     
                 </div>

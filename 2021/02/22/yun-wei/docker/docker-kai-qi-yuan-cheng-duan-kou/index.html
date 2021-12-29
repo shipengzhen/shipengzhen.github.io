@@ -29,7 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="牛宝宝" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -510,18 +512,24 @@
     "tlscacert": "",
     "tlscert": "",
     "tlskey": "",
-}</code></pre></li>
+}
+</code></pre>
+</li>
 <li><ol start="2">
 <li><p>修改/usr/lib/systemd/system/docker.service 文件</p>
 <pre><code>vim /usr/lib/systemd/system/docker.service
 
 13 #ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-14 ExecStart=/usr/bin/dockerd  --containerd=/run/containerd/containerd.sock</code></pre></li>
+14 ExecStart=/usr/bin/dockerd  --containerd=/run/containerd/containerd.sock
+</code></pre>
+</li>
 </ol>
 </li>
 <li><p>3.重新启动</p>
 <pre><code>systemctl daemon-reload
-systemctl restart docker.service</code></pre></li>
+systemctl restart docker.service
+</code></pre>
+</li>
 </ul>
 <h2 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h2><ul>
 <li><p>1.修改/usr/lib/systemd/system/docker.service 文件</p>
@@ -538,10 +546,14 @@ systemctl restart docker.service</code></pre></li>
 --tlscert=/etc/docker/server-cert.pem \
 --tlskey=/etc/docker/server-key.pem \
 -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock
---containerd=/run/containerd/containerd.sock</code></pre></li>
+--containerd=/run/containerd/containerd.sock
+</code></pre>
+</li>
 <li><p>2.重新启动</p>
 <pre><code>systemctl daemon-reload
-systemctl restart docker.service</code></pre></li>
+systemctl restart docker.service
+</code></pre>
+</li>
 </ul>
 <h3 id="证书生成流程"><a href="#证书生成流程" class="headerlink" title="证书生成流程"></a>证书生成流程</h3><p><strong>主要流程有三步</strong></p>
 <ol>
@@ -552,7 +564,8 @@ read -s PASSWORD
 openssl genrsa -aes256 -passout pass:$PASSWORD  -out ca-key.pem 2048
 #生成ca证书，填写配置信息
 openssl req -new -x509 -passin "pass:$PASSWORD" -days 365 -key ca-key.pem -sha256 -out ca.pem
-12345</code></pre>
+12345
+</code></pre>
 <p>2.生成 server 密钥和证书</p>
 <pre class=" language-@"><code class="language-@">#生成server证书私钥文件
 openssl genrsa -out server-key.pem 2048
@@ -561,7 +574,8 @@ openssl req -subj "/CN=$SERVER" -new -key server-key.pem -out server.csr
 #使用CA证书及CA密钥以及上面的server证书请求文件进行签发，生成server自签证书
 openssl x509 -req -days 365 -in server.csr -CA ca.pem -CAkey ca-key.pem -passin "pass:$PASSWORD" -CAcreateserial  -out server-cert.pem
 
-1234567</code></pre>
+1234567
+</code></pre>
 <p>3.生成 client 密钥和证书</p>
 <pre class=" language-@"><code class="language-@">#生成client证书RSA私钥文件
 openssl genrsa -out key.pem 2048
@@ -570,7 +584,8 @@ openssl req -subj '/CN=client' -new -key key.pem -out client.csr
 
 sh -c 'echo "extendedKeyUsage=clientAuth" > extfile.cnf'
 #生成client自签证书（根据上面的client私钥文件、client证书请求文件生成）
-openssl x509 -req -days 365 -in client.csr -CA ca.pem -CAkey ca-key.pem  -passin "pass:$PASSWORD" -CAcreate</code></pre>
+openssl x509 -req -days 365 -in client.csr -CA ca.pem -CAkey ca-key.pem  -passin "pass:$PASSWORD" -CAcreate
+</code></pre>
 <h4 id="创建脚本"><a href="#创建脚本" class="headerlink" title="创建脚本"></a>创建脚本</h4><pre><code>#创建 Docker TLS 证书
 #!/bin/bash
 
@@ -618,25 +633,9 @@ chmod 0444 ca.pem server-cert.pem cert.pem
 rm client.csr server.csr
 
 echo "生成文件完成"
-###生成结束###</code></pre><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+###生成结束###
+</code></pre>
+
             </div>
             <hr/>
 
